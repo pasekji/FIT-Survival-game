@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RpgCharacterShadow.png-4262b6eb9c828dc4aae880c2a9cb1413.stex"
+path="res://.import/RpgCharacterShadow.png-9203956c90d567a9ebf61665e13ece57.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/RpgCharacterShadow.png"
-dest_files=[ "res://.import/RpgCharacterShadow.png-4262b6eb9c828dc4aae880c2a9cb1413.stex" ]
+source_file="res://player-animation-godot-demo/Sprites/RpgCharacterShadow.png"
+dest_files=[ "res://.import/RpgCharacterShadow.png-9203956c90d567a9ebf61665e13ece57.stex" ]
 
 [params]
 

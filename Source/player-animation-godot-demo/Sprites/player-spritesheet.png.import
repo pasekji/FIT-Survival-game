@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player-spritesheet.png-779c5c6afa2ee5093f9a1cba7d769f13.stex"
+path="res://.import/player-spritesheet.png-169c91607bbacbacebba0af91640f7a3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/player-spritesheet.png"
-dest_files=[ "res://.import/player-spritesheet.png-779c5c6afa2ee5093f9a1cba7d769f13.stex" ]
+source_file="res://player-animation-godot-demo/Sprites/player-spritesheet.png"
+dest_files=[ "res://.import/player-spritesheet.png-169c91607bbacbacebba0af91640f7a3.stex" ]
 
 [params]
 
