@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RpgCharacterShadow.png-b02763c33db4df431a30cd48e93b8d20.stex"
+path="res://.import/template-body.png-683761077dc0b0a69536616008b46353.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/RpgCharacterShadow.png"
-dest_files=[ "res://.import/RpgCharacterShadow.png-b02763c33db4df431a30cd48e93b8d20.stex" ]
+source_file="res://graphics/Player/template-body.png"
+dest_files=[ "res://.import/template-body.png-683761077dc0b0a69536616008b46353.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

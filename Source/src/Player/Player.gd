@@ -5,7 +5,7 @@ const SPEED = 3000
 var movedir = Vector2(0,0)
 var spritedir = "down"
 
-func _physics_process(delta):
+func _physics_process(_delta):
 		controls_loop()
 		movement_loop()
 		spritedir_loop()
