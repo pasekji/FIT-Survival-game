@@ -159,7 +159,7 @@ region_enabled = true
 region_rect = Rect2( 791.037, 145.431, 292.482, 361.34 )
 
 [node name="Door" type="StaticBody2D" parent="."]
-position = Vector2( -108.363, 3841.97 )
+position = Vector2( -105.69, 3842.86 )
 rotation = 4.71239
 collision_layer = 8
 __meta__ = {

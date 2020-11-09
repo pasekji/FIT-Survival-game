@@ -6,6 +6,7 @@
 extents = Vector2( 66.6252, 107.889 )
 
 [node name="Area2D" type="Area2D"]
+light_mask = 8
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 6, 6 )
