@@ -4,9 +4,9 @@
 [ext_resource path="res://assets/floor.png" type="Texture" id=2]
 [ext_resource path="res://src/Function Objects/Portal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=4]
-[ext_resource path="res://src/Static Objects/Table/Table_2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Static Objects/Table/Table_Up_to_Down.tscn" type="PackedScene" id=5]
 [ext_resource path="res://graphics/doors and windows/door-black.png" type="Texture" id=6]
-[ext_resource path="res://src/Static Objects/Table/Table_1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Static Objects/Table/Table_Left_to_Right.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.4822, 17.9165 )
