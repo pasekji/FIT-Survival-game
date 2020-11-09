@@ -1,14 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Function Objects/Portal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=3]
 [ext_resource path="res://graphics/fit-env-assets/fit-env-assets.png" type="Texture" id=4]
 [ext_resource path="res://assets/floor.png" type="Texture" id=5]
-[ext_resource path="res://graphics/doors and windows/door-black.png" type="Texture" id=6]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 11.4681, 18.3979 )
+[ext_resource path="res://src/Static Objects/Doors/Doors_Simple_Full.tscn" type="PackedScene" id=6]
 
 [node name="0Base" type="Node2D"]
 z_as_relative = false
@@ -160,52 +157,18 @@ next_scene_path = "res://src/Levels/0Gate.tscn"
 
 [node name="Doors" type="Node" parent="."]
 
-[node name="Door1" type="Area2D" parent="Doors"]
-position = Vector2( 3140.74, 4091.99 )
-scale = Vector2( 6, 6 )
+[node name="Door_Cafeteria" parent="Doors" instance=ExtResource( 6 )]
+position = Vector2( 890, 4092 )
+rotation = 3.14159
 
-[node name="Sprite" type="Sprite" parent="Doors/Door1"]
-texture = ExtResource( 6 )
+[node name="Door_Entering" parent="Doors" instance=ExtResource( 6 )]
+position = Vector2( 3140.45, 4087.38 )
+rotation = 3.14159
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door1"]
-shape = SubResource( 1 )
+[node name="Door_Lift" parent="Doors" instance=ExtResource( 6 )]
+position = Vector2( 6196.31, 4134.81 )
+rotation = 3.14159
 
-[node name="Door3" type="Area2D" parent="Doors"]
-position = Vector2( 8060.74, 3540.04 )
+[node name="Door_155" parent="Doors" instance=ExtResource( 6 )]
+position = Vector2( 8057.37, 3545.61 )
 rotation = 1.5708
-scale = Vector2( 6, 6 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Doors/Door3"]
-texture = ExtResource( 6 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door3"]
-shape = SubResource( 1 )
-
-[node name="Door4" type="Area2D" parent="Doors"]
-position = Vector2( 6190.86, 4142.6 )
-scale = Vector2( 6, 6 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Doors/Door4"]
-texture = ExtResource( 6 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door4"]
-shape = SubResource( 1 )
-
-[node name="Door2" type="Area2D" parent="Doors"]
-position = Vector2( 891.328, 4091.99 )
-scale = Vector2( 6, 6 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Doors/Door2"]
-texture = ExtResource( 6 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door2"]
-shape = SubResource( 1 )

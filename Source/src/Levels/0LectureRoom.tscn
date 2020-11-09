@@ -1,20 +1,17 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/floor.png" type="Texture" id=2]
 [ext_resource path="res://src/Function Objects/Portal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=4]
 [ext_resource path="res://graphics/fit-env-assets/návrh-pro-představu.png" type="Texture" id=5]
-[ext_resource path="res://graphics/doors and windows/door-black.png" type="Texture" id=6]
+[ext_resource path="res://src/Static Objects/Doors/Doors_Simple_Full.tscn" type="PackedScene" id=6]
 [ext_resource path="res://graphics/fit-env-assets/fit-env-assets.png" type="Texture" id=7]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 425.138, 533.518 )
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10.4822, 17.9165 )
-
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 57.729, 702.342 )
 
 [node name="0LectureRoom" type="Node2D"]
@@ -46,7 +43,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chair"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Chair"]
 scale = Vector2( 3, 3 )
@@ -61,7 +58,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chair/Chair2"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Chair/Chair2"]
 scale = Vector2( 3, 3 )
@@ -76,7 +73,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chair/Chair3"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Chair/Chair3"]
 scale = Vector2( 3, 3 )
@@ -91,7 +88,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chair/Chair4"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Chair/Chair4"]
 scale = Vector2( 3, 3 )
@@ -108,7 +105,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chair5"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Chair5"]
 scale = Vector2( 3, 3 )
@@ -123,7 +120,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chair5/Chair6"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Chair5/Chair6"]
 scale = Vector2( 3, 3 )
@@ -138,7 +135,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chair5/Chair7"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Chair5/Chair7"]
 scale = Vector2( 3, 3 )
@@ -153,7 +150,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chair5/Chair8"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Chair5/Chair8"]
 scale = Vector2( 3, 3 )
@@ -162,24 +159,18 @@ region_enabled = true
 region_rect = Rect2( 791.037, 145.431, 292.482, 361.34 )
 
 [node name="Door" type="StaticBody2D" parent="."]
-position = Vector2( -106.244, 3839.85 )
+position = Vector2( -108.363, 3841.97 )
 rotation = 4.71239
-scale = Vector2( 6, 6 )
 collision_layer = 8
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
-shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="Door"]
-texture = ExtResource( 6 )
+[node name="Area2D" parent="Door" instance=ExtResource( 6 )]
 
 [node name="0Base" parent="Door" instance=ExtResource( 3 )]
-position = Vector2( 1.07056, 26.3104 )
+position = Vector2( 0, 157 )
 rotation = 1.5708
-scale = Vector2( 0.166667, 0.166667 )
 
 [node name="Table" type="StaticBody2D" parent="."]
 position = Vector2( 3564.27, 1489.13 )
@@ -196,8 +187,7 @@ region_rect = Rect2( 1313.71, 69.1784, 34.295, 292.365 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
 position = Vector2( 2.99658, 0 )
-scale = Vector2( 1, 1 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="Table2" type="StaticBody2D" parent="Table"]
 position = Vector2( 0, 1212 )
@@ -214,7 +204,7 @@ region_rect = Rect2( 1313.71, 69.1784, 34.295, 292.365 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table/Table2"]
 position = Vector2( 7, -1 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 259.661, 3829.59 )
