@@ -1,6 +1,9 @@
+tool 
+
 extends Sprite
 
+export(String, FILE) var next_scene_path = ""
 
-func _on_Area2D_body_entered(_body):
-	var goal =  "res://src/Levels/" + String(self.name) + ".tscn"
-	get_tree().change_scene(String(goal))
+
+func _on_Area2D_body_entered(body):
+	get_tree().change_scene(next_scene_path)

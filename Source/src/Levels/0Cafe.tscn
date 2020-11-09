@@ -50,6 +50,7 @@ texture = ExtResource( 6 )
 [node name="0Base" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1645.36, 93.2057 )
 scale = Vector2( 0.937614, 0.928909 )
+next_scene_path = "res://src/Levels/0Base.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1025.71, 301.261 )

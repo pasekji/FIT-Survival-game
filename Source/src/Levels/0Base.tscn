@@ -145,15 +145,18 @@ polygon = PoolVector2Array( 6.07568, 3.56903, 112.863, 48.9536, 163.587, 48.9536
 
 [node name="0Cafe" parent="Portals" instance=ExtResource( 1 )]
 position = Vector2( 892.823, 3935.45 )
+next_scene_path = "res://src/Levels/0Cafe.tscn"
 
 [node name="0LectureRoom" parent="Portals" instance=ExtResource( 1 )]
 position = Vector2( 7903.79, 3540.88 )
+next_scene_path = "res://src/Levels/0LectureRoom.tscn"
 
 [node name="1Base3" parent="Portals" instance=ExtResource( 1 )]
 position = Vector2( 6195.97, 3984.48 )
 
 [node name="0Gate" parent="Portals" instance=ExtResource( 1 )]
 position = Vector2( 3139.16, 3932.52 )
+next_scene_path = "res://src/Levels/0Gate.tscn"
 
 [node name="Doors" type="Node" parent="."]
 

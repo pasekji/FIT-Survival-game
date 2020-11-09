@@ -1,10 +1,14 @@
 extends KinematicBody2D
 
 const SPEED = 3000
-
+var ISIC = false
 var movedir = Vector2(0,0)
 var spritedir = "down"
 
+func hasIsic() -> bool:
+	return ISIC
+
+	
 func _physics_process(_delta):
 		controls_loop()
 		movement_loop()
@@ -43,3 +47,8 @@ func anim_switch(animation):
 	var newanim = str(animation,spritedir)
 	if $anim.current_animation != newanim:
 		$anim.play(newanim)
+
+
+func _on_ISIC_body_entered(body: Area2D):
+	print(body)
+	ISIC = true
