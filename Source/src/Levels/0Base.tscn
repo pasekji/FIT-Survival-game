@@ -87,7 +87,7 @@ region_enabled = true
 region_rect = Rect2( 97, 145, 71, 23 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CafeTables/TableCafe2"]
-polygon = PoolVector2Array( -10.4071, 0.254059, 11.5519, 9.91074, 33.9079, -0.142792, 34.437, -9.53491, 11.4197, 2.10603, -11.8622, -9.79948, -33.0276, 0.783195, -34.0858, 4.48713, -31.5724, 7.00052 )
+polygon = PoolVector2Array( -10.4071, 0.254059, 11.5519, 9.91074, 33.9079, -0.142792, 34.437, -9.53491, 21.4465, -2.96504, 11.4197, 2.10603, -11.8622, -9.79948, -33.0276, 0.783195, -34.0858, 4.48713, -31.5724, 7.00052 )
 
 [node name="TableCafe3" type="StaticBody2D" parent="CafeTables"]
 position = Vector2( 2420.81, 3267.08 )

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://graphics/fit-env-assets/fit-env-assets.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 158.664, 146.661 )
+
+[node name="StaticBody2D" type="StaticBody2D"]
+light_mask = 8
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 8, 8 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 3.66085, 4.16209, 40.8674, 38.1429 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1.18921 )
+shape = SubResource( 1 )
