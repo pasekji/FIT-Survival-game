@@ -65,5 +65,11 @@ position = Vector2( 1200, 300 )
 
 [node name="0Base" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1200, -60 )
+
+[node name="Portal" parent="0Base" index="2"]
+next_scene_path = "res://src/Levels/0Base.tscn"
+player_spawn_location = Vector2( 3100, 3800 )
 [connection signal="body_entered" from="Objects/ISIC2" to="Objects/ISIC2" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Objects/ISIC2" to="Player" method="_on_ISIC_body_entered"]
+
+[editable path="0Base"]

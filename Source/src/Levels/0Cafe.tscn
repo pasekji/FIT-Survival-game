@@ -45,3 +45,9 @@ position = Vector2( 564.303, 1061.24 )
 
 [node name="0Base" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1400, -60 )
+
+[node name="Portal" parent="0Base" index="2"]
+next_scene_path = "res://src/Levels/0Base.tscn"
+player_spawn_location = Vector2( 700, 3800 )
+
+[editable path="0Base"]

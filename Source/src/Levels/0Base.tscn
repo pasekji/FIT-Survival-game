@@ -70,13 +70,25 @@ position = Vector2( 7760, 3100 )
 position = Vector2( 700, 4092 )
 rotation = -3.14159
 
+[node name="Portal" parent="0Cafe" index="2"]
+next_scene_path = "res://src/Levels/0Cafe.tscn"
+player_spawn_location = Vector2( 1400, 300 )
+
 [node name="0LectureRoom" parent="." instance=ExtResource( 1 )]
 position = Vector2( 8059, 3071 )
 rotation = 1.5708
 
+[node name="Portal" parent="0LectureRoom" index="2"]
+next_scene_path = "res://src/Levels/0LectureRoom.tscn"
+player_spawn_location = Vector2( 200, 3800 )
+
 [node name="0Gate" parent="." instance=ExtResource( 1 )]
 position = Vector2( 3100, 4092 )
 rotation = -3.14159
+
+[node name="Portal" parent="0Gate" index="2"]
+next_scene_path = "res://src/Levels/0Gate.tscn"
+player_spawn_location = Vector2( 1200, 300 )
 
 [node name="Objects" type="Node" parent="."]
 
@@ -152,3 +164,9 @@ region_rect = Rect2( 144, 96, 48, 24 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/Table"]
 polygon = PoolVector2Array( 6.07568, 3.56903, 112.863, 48.9536, 163.587, 48.9536, 315.759, -36.4762, 314.424, -128.58, 143.564, -40.4807, 118.202, -40.4807, -62.0011, -128.58, -63.3359, -39.1458 )
+
+[editable path="0Cafe"]
+
+[editable path="0LectureRoom"]
+
+[editable path="0Gate"]

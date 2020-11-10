@@ -39,6 +39,10 @@ position = Vector2( 200, 3800 )
 position = Vector2( -108, 3768 )
 rotation = 4.71239
 
+[node name="Portal" parent="0Base" index="2"]
+next_scene_path = "res://src/Levels/0Base.tscn"
+player_spawn_location = Vector2( 7760, 3100 )
+
 [node name="Objects" type="Node" parent="."]
 
 [node name="Chairs" parent="Objects" instance=ExtResource( 5 )]
@@ -82,7 +86,8 @@ position = Vector2( 634.284, 1289.27 )
 rotation = 1.5708
 
 [node name="Board 1" parent="Objects" instance=ExtResource( 6 )]
-position = Vector2( 4112, 960 )
 
 [node name="Board 2" parent="Objects" instance=ExtResource( 6 )]
 position = Vector2( 4112, 2320 )
+
+[editable path="0Base"]
