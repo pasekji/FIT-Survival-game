@@ -1,14 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://src/Function Objects/Portal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Function Objects/DoorPortal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=3]
 [ext_resource path="res://graphics/fit-env-assets/fit-env-assets.png" type="Texture" id=4]
 [ext_resource path="res://assets/floor.png" type="Texture" id=5]
-[ext_resource path="res://graphics/doors and windows/door-black.png" type="Texture" id=6]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 11.4681, 18.3979 )
 
 [node name="0Base" type="Node2D"]
 z_as_relative = false
@@ -19,7 +15,8 @@ margin_bottom = 4000.0
 texture = ExtResource( 5 )
 stretch_mode = 2
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": false
 }
 
 [node name="Floorimage2" type="TextureRect" parent="Floorimage"]
@@ -67,11 +64,23 @@ __meta__ = {
 }
 
 [node name="PLAYER" parent="." instance=ExtResource( 2 )]
-position = Vector2( 898.758, 3737.01 )
+position = Vector2( 7760, 3100 )
 
-[node name="CafeTables" type="Node" parent="."]
+[node name="0Cafe" parent="." instance=ExtResource( 1 )]
+position = Vector2( 700, 4092 )
+rotation = -3.14159
 
-[node name="TableCafe2" type="StaticBody2D" parent="CafeTables"]
+[node name="0LectureRoom" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8059, 3071 )
+rotation = 1.5708
+
+[node name="0Gate" parent="." instance=ExtResource( 1 )]
+position = Vector2( 3100, 4092 )
+rotation = -3.14159
+
+[node name="Objects" type="Node" parent="."]
+
+[node name="TableCafe2" type="StaticBody2D" parent="Objects"]
 position = Vector2( 1412.49, 2882.94 )
 scale = Vector2( 15, 15 )
 collision_layer = 2147483656
@@ -80,16 +89,16 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="CafeTables/TableCafe2"]
+[node name="Sprite" type="Sprite" parent="Objects/TableCafe2"]
 position = Vector2( 7.62939e-06, 1.52588e-05 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 97, 145, 71, 23 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CafeTables/TableCafe2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/TableCafe2"]
 polygon = PoolVector2Array( -10.4071, 0.254059, 11.5519, 9.91074, 33.9079, -0.142792, 34.437, -9.53491, 11.4197, 2.10603, -11.8622, -9.79948, -33.0276, 0.783195, -34.0858, 4.48713, -31.5724, 7.00052 )
 
-[node name="TableCafe3" type="StaticBody2D" parent="CafeTables"]
+[node name="TableCafe3" type="StaticBody2D" parent="Objects"]
 position = Vector2( 2420.81, 3267.08 )
 rotation = 0.436332
 scale = Vector2( 15, 15 )
@@ -99,16 +108,16 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="CafeTables/TableCafe3"]
+[node name="Sprite" type="Sprite" parent="Objects/TableCafe3"]
 position = Vector2( 2.28882e-05, -1.52588e-05 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 96, 170, 48, 22 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CafeTables/TableCafe3"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/TableCafe3"]
 polygon = PoolVector2Array( -0.0970764, 10.4958, -23.8203, -0.991173, -20.0745, -9.48158, -1.34564, 1.25629, 18.1323, -7.98328, 21.8781, -1.74033 )
 
-[node name="TableCafe4" type="StaticBody2D" parent="CafeTables"]
+[node name="TableCafe4" type="StaticBody2D" parent="Objects"]
 position = Vector2( 2887.36, 2518.7 )
 rotation = -2.17992
 scale = Vector2( 15, 15 )
@@ -118,94 +127,28 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="CafeTables/TableCafe4"]
+[node name="Sprite" type="Sprite" parent="Objects/TableCafe4"]
 position = Vector2( 0, 1.52588e-05 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 95, 96, 49, 25 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CafeTables/TableCafe4"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/TableCafe4"]
 polygon = PoolVector2Array( -22.0681, 0.0962219, 0.381165, 9.82422, 22.2692, -0.465019, 19.8372, -5.14194, 0.381165, 3.4636, -17.017, -4.58071 )
 
-[node name="Table" type="StaticBody2D" parent="CafeTables"]
+[node name="Table" type="StaticBody2D" parent="Objects"]
 position = Vector2( 1631.29, 2318.08 )
 scale = Vector2( 1.5, 1.5 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Sprite" type="Sprite" parent="CafeTables/Table"]
+[node name="Sprite" type="Sprite" parent="Objects/Table"]
 position = Vector2( 129.479, -41.38 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 144, 96, 48, 24 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CafeTables/Table"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/Table"]
 polygon = PoolVector2Array( 6.07568, 3.56903, 112.863, 48.9536, 163.587, 48.9536, 315.759, -36.4762, 314.424, -128.58, 143.564, -40.4807, 118.202, -40.4807, -62.0011, -128.58, -63.3359, -39.1458 )
-
-[node name="Portals" type="Node" parent="."]
-
-[node name="0Cafe" parent="Portals" instance=ExtResource( 1 )]
-position = Vector2( 892.823, 3935.45 )
-next_scene_path = "res://src/Levels/0Cafe.tscn"
-
-[node name="0LectureRoom" parent="Portals" instance=ExtResource( 1 )]
-position = Vector2( 7903.79, 3540.88 )
-next_scene_path = "res://src/Levels/0LectureRoom.tscn"
-
-[node name="1Base3" parent="Portals" instance=ExtResource( 1 )]
-position = Vector2( 6195.97, 3984.48 )
-
-[node name="0Gate" parent="Portals" instance=ExtResource( 1 )]
-position = Vector2( 3139.16, 3932.52 )
-next_scene_path = "res://src/Levels/0Gate.tscn"
-
-[node name="Doors" type="Node" parent="."]
-
-[node name="Door1" type="Area2D" parent="Doors"]
-position = Vector2( 3140.74, 4091.99 )
-scale = Vector2( 6, 6 )
-
-[node name="Sprite" type="Sprite" parent="Doors/Door1"]
-texture = ExtResource( 6 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door1"]
-shape = SubResource( 1 )
-
-[node name="Door3" type="Area2D" parent="Doors"]
-position = Vector2( 8060.74, 3540.04 )
-rotation = 1.5708
-scale = Vector2( 6, 6 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Doors/Door3"]
-texture = ExtResource( 6 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door3"]
-shape = SubResource( 1 )
-
-[node name="Door4" type="Area2D" parent="Doors"]
-position = Vector2( 6190.86, 4142.6 )
-scale = Vector2( 6, 6 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Doors/Door4"]
-texture = ExtResource( 6 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door4"]
-shape = SubResource( 1 )
-
-[node name="Door2" type="Area2D" parent="Doors"]
-position = Vector2( 891.328, 4091.99 )
-scale = Vector2( 6, 6 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Doors/Door2"]
-texture = ExtResource( 6 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door2"]
-shape = SubResource( 1 )

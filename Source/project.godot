@@ -24,6 +24,10 @@ config/name="FITtmp"
 run/main_scene="res://src/Levels/0Gate.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Global.gd"
+
 [input]
 
 up={
@@ -53,6 +57,7 @@ right={
 2d_physics/layer_2="enemies"
 2d_physics/layer_3="items"
 2d_physics/layer_4="world"
+2d_physics/layer_5="portals"
 
 [rendering]
 

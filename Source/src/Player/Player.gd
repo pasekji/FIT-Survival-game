@@ -8,7 +8,10 @@ var spritedir = "down"
 func hasIsic() -> bool:
 	return ISIC
 
+func _ready():
+	self.global_position = Global.player_initial_map_position
 	
+
 func _physics_process(_delta):
 		controls_loop()
 		movement_loop()
