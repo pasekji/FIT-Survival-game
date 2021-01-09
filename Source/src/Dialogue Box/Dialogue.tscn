@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Dialogue Box/Dialogue.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/impact_imported.tres" type="DynamicFont" id=2]
+
+[node name="Dialogue" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+dialog = [ "Ahoj", "skap" ]
+
+[node name="Popup" type="Popup" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -350.0
+margin_top = -50.0
+margin_right = 350.0
+margin_bottom = 50.0
+rect_clip_content = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Popup/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -350.0
+margin_top = -50.0
+margin_right = 350.0
+margin_bottom = 50.0
+custom_fonts/normal_font = ExtResource( 2 )
+meta_underlined = false
+text = "aaaaa"
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

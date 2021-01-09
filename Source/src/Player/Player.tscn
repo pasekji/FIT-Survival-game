@@ -157,10 +157,13 @@ anims/walkup = SubResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -3.66365, -42.6154 )
-scale = Vector2( 3.04177, 3.04177 )
+scale = Vector2( 3, 3 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 3
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="shadow" type="Sprite" parent="."]
 show_behind_parent = true

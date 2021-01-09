@@ -8,9 +8,6 @@ extents = Vector2( 66.7734, 107.565 )
 
 [node name="Door" type="StaticBody2D"]
 collision_layer = 8
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -20,4 +17,4 @@ scale = Vector2( 6, 6 )
 texture = ExtResource( 2 )
 
 [node name="Portal" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, 156 )
+position = Vector2( -48, 108 )
