@@ -16,7 +16,7 @@ func _load_dialog():
 			var ISIC_instance = ISIC.instance()
 			ISIC_instance.name = "instancted ISIC"
 			add_child(ISIC_instance)
-			ISIC_instance.position = Vector2(0, 0)
+			ISIC_instance.position = Vector2(115, -150)
 			ISIC_instance.set_scale(Vector2(0.5, 0.5))
 
 func _process(_delta):

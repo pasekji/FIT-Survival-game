@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://graphics/Player/player-spritesheet.png" type="Texture" id=2]
@@ -135,6 +135,9 @@ tracks/0/keys = {
 "values": [ 7, 8, 7, 8, 7, 8, 7, 8, 7, 8 ]
 }
 
+[sub_resource type="CircleShape2D" id=10]
+radius = 359.579
+
 [node name="PLAYER" type="KinematicBody2D"]
 position = Vector2( 348.211, 789.842 )
 collision_mask = 31
@@ -178,3 +181,10 @@ __meta__ = {
 position = Vector2( -3.23224, -42.9419 )
 current = true
 zoom = Vector2( 4, 4 )
+
+[node name="PickUp area" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUp area"]
+position = Vector2( -3.65109, -42.5027 )
+shape = SubResource( 10 )

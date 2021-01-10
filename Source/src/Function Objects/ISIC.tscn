@@ -4,9 +4,10 @@
 [ext_resource path="res://assets/coin.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
+radius = 64.0312
 
-[node name="ISIC2" type="Area2D"]
-position = Vector2( 1008, 324 )
+[node name="ISIC" type="Area2D"]
+collision_layer = 4
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -17,4 +18,8 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="."]
+playback_speed = 0.1
+playback/speed = 0.1
 [connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
