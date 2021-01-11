@@ -1,0 +1,14 @@
+{
+  "coin": {
+    "ItemCategory": "Money",
+    "StackSize": 99,
+    "Description": "Money for trading"
+  },
+  "head": {
+    "ItemCategory": "Totem",
+    "AddHealth": 5,
+    "AddEnergy": 32,
+    "StackSize": 99,
+    "Description": "It smells like medicine."
+  }
+}

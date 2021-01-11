@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://graphics/Player/NPC_spritesheet.png" type="Texture" id=1]
+[ext_resource path="res://graphics/Player/sprites_npc1.png" type="Texture" id=1]
 [ext_resource path="res://graphics/Player/RpgCharacterShadow.png" type="Texture" id=2]
 [ext_resource path="res://src/NPC/gatekeeper/gatekeeper.gd" type="Script" id=3]
 [ext_resource path="res://assets/fonts/impact_imported.tres" type="DynamicFont" id=4]

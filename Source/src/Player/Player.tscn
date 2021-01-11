@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://graphics/Player/player-spritesheet.png" type="Texture" id=2]
 [ext_resource path="res://graphics/Player/RpgCharacterShadow.png" type="Texture" id=3]
+[ext_resource path="res://src/Player/PickUpArea.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 73.0684, 105.004 )
@@ -136,11 +137,11 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=10]
-radius = 359.579
+radius = 229.549
 
 [node name="PLAYER" type="KinematicBody2D"]
 position = Vector2( 348.211, 789.842 )
-collision_mask = 31
+collision_mask = 27
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -182,9 +183,12 @@ position = Vector2( -3.23224, -42.9419 )
 current = true
 zoom = Vector2( 3, 3 )
 
-[node name="PickUp area" type="Area2D" parent="."]
-visible = false
+[node name="PickUpArea" type="Area2D" parent="."]
+collision_mask = 0
+script = ExtResource( 4 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUp area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpArea"]
 position = Vector2( -3.65109, -42.5027 )
 shape = SubResource( 10 )
+[connection signal="body_entered" from="PickUpArea" to="PickUpArea" method="_on_PickUpArea_body_entered"]
+[connection signal="body_exited" from="PickUpArea" to="PickUpArea" method="_on_PickUpArea_body_exited"]
