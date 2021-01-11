@@ -5,4 +5,3 @@ func _ready():
 		$TextureRect.texture = load("res://assets/coin.png")
 	else:
 		$TextureRect.texture = load("res://assets/light.png")
-
