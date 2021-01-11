@@ -1,11 +1,12 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://graphics/player-spritesheet.png" type="Texture" id=2]
-[ext_resource path="res://graphics/RpgCharacterShadow.png" type="Texture" id=3]
+[ext_resource path="res://graphics/Player/player-spritesheet.png" type="Texture" id=2]
+[ext_resource path="res://graphics/Player/RpgCharacterShadow.png" type="Texture" id=3]
+[ext_resource path="res://src/Player/Camera2D.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 74.5, 106.5 )
+extents = Vector2( 49.5099, 105.242 )
 
 [sub_resource type="Animation" id=2]
 length = 0.05
@@ -137,12 +138,11 @@ tracks/0/keys = {
 
 [node name="PLAYER" type="KinematicBody2D"]
 position = Vector2( 348.211, 789.842 )
-collision_mask = 15
+collision_mask = 0
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-show_behind_parent = true
-position = Vector2( -4.5, -43 )
+position = Vector2( -3.47095, -42.6002 )
 shape = SubResource( 1 )
 
 [node name="anim" type="AnimationPlayer" parent="."]
@@ -157,22 +157,24 @@ anims/walkright = SubResource( 8 )
 anims/walkup = SubResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -3.66365, -42.6154 )
+position = Vector2( -3.66365, -42.9689 )
 scale = Vector2( 3.04177, 3.04177 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 3
 
 [node name="shadow" type="Sprite" parent="."]
+visible = false
 show_behind_parent = true
-position = Vector2( -0.201935, -69.5083 )
+position = Vector2( 1.789, -69.842 )
 scale = Vector2( 9.2802, 10.0085 )
 texture = ExtResource( 3 )
 __meta__ = {
-"_edit_group_": true
+"_edit_lock_": true
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( -3.23225, -42.9419 )
+position = Vector2( -2.23224, -42.9419 )
 current = true
-zoom = Vector2( 2, 2 )
+process_mode = 0
+script = ExtResource( 4 )
