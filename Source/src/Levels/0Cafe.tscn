@@ -44,7 +44,7 @@ player_spawn_location = Vector2( 700, 3800 )
 position = Vector2( 1418, 1292 )
 
 [node name="Table2" parent="Node2D" instance=ExtResource( 3 )]
-position = Vector2( 649.252, 406.192 )
+position = Vector2( 644, 460 )
 
 [node name="Table3" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 1400, 604 )
@@ -53,6 +53,6 @@ position = Vector2( 1400, 604 )
 position = Vector2( 564.303, 1061.24 )
 
 [node name="CafeteriaLady" parent="." instance=ExtResource( 6 )]
-position = Vector2( 203, 468 )
+position = Vector2( 299, 447 )
 
 [editable path="0Base"]
