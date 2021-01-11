@@ -29,7 +29,6 @@ config/icon="res://icon.png"
 Global="*res://Global.gd"
 JsonData="*res://src/Inventory/JSONData.gd"
 PlayerInventory="*res://src/Player/PlayerInventory.gd"
-UserInterface="*res://src/UI/UserInterface.gd"
 
 [input]
 

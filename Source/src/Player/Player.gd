@@ -16,6 +16,7 @@ func _physics_process(_delta):
 		controls_loop()
 		movement_loop()
 		spritedir_loop()
+		pickup()
 		
 		if movedir != Vector2(0,0):
 			anim_switch("walk")
@@ -52,9 +53,8 @@ func anim_switch(animation):
 		$anim.play(newanim)
 
 
-func _input(event):
-	if event.is_action_pressed("pickup"):
-		if $PickupZone.items_in_range.size() > 0:
-			var pickup_item = $PickupZone.items_in_range.values()[0]
-			pickup_item.pick_up_item(self)
-			$PickupZone.items_in_range.erase(pickup_item)
+func pickup():
+	if $PickUpArea.items_in_range.size() > 0:
+		var pickup_item = $PickUpArea.items_in_range.values()[0]
+		pickup_item.pick_up_item(self)
+		$PickUpArea.items_in_range.erase(pickup_item)

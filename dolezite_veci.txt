@@ -1,0 +1,5 @@
+kus fakulty ktora sa da prechadzat
+npc chovani - pozdravenie, detekcia, pohyb npcciek
+cyklus - vypije kavu, potom po case ho vyhodi a da do kosa, uklizecka, ktora zbiera kalisky, vraceni headsetov
+
+Trailer - utlouct ako sa da

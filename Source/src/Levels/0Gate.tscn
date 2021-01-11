@@ -62,7 +62,7 @@ position = Vector2( 640, 1018 )
 position = Vector2( 316, 458 )
 
 [node name="ItemDrop" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1212, 781 )
+position = Vector2( 652, 509 )
 
 [node name="UserInterface" parent="." instance=ExtResource( 5 )]
 
