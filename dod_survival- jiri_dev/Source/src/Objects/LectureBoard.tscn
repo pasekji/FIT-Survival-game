@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://graphics/fit-env-assets/fit-env-assets.png" type="Texture" id=1]
+
+[node name="Board 1" type="Sprite"]
+position = Vector2( 4112, 960 )
+rotation = 1.5708
+scale = Vector2( 11, 4 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 119.867, 29.8231, 24.1603, 27.8871 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Board2" type="Sprite" parent="."]
+position = Vector2( 23.2656, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 119.867, 29.8231, 24.1603, 27.8871 )
+
+[node name="Board3" type="Sprite" parent="."]
+position = Vector2( 47.3119, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 119.867, 29.8231, 24.1603, 27.8871 )
+
+[node name="Board4" type="Sprite" parent="."]
+position = Vector2( 70.5774, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 119.867, 29.8231, 24.1603, 27.8871 )
