@@ -34,6 +34,7 @@ position = Vector2( 1641, 1303 )
 
 [node name="0Base" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1200, -60 )
+collision_layer = 16
 
 [node name="Portal" parent="0Base" index="2"]
 position = Vector2( -46, 114 )

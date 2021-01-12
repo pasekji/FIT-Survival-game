@@ -38,6 +38,7 @@ position = Vector2( 200, 3800 )
 [node name="0Base" parent="." instance=ExtResource( 7 )]
 position = Vector2( -108, 3768 )
 rotation = 4.71239
+collision_layer = 16
 
 [node name="Portal" parent="0Base" index="2"]
 next_scene_path = "res://src/Levels/0Base.tscn"

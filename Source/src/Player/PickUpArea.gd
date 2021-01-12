@@ -4,8 +4,8 @@ var items_in_range = {}
 
 
 func _on_PickUpArea_body_entered(body):
-	print(body.name)
 	items_in_range[body] = body
+	
 
 
 func _on_PickUpArea_body_exited(body):

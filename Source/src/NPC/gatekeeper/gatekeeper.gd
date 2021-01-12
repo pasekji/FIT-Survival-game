@@ -13,10 +13,9 @@ func _load_dialog(dialog_index):
 
 func spawnISIC():
 	var ISIC_instance = item_drop.instance()
-	ISIC_instance.item_name = "ISIC"
-	add_child(ISIC_instance)
+	ISIC_instance.item_name = "isic"
+	get_parent().call_deferred("add_child", ISIC_instance)
 	ISIC_instance.global_position = Vector2(630, 500)
-	ISIC_instance.set_scale(Vector2(0.5, 0.5))
 
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept"):

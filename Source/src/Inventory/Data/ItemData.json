@@ -4,9 +4,24 @@
     "StackSize": 99,
     "Description": "Money for trading."
   },
-  "ISIC": {
+  "isic": {
     "ItemCategory": "Totem",
     "StackSize": 1,
     "Description": "You need this to open doors."
+  },
+  "facemask": {
+    "ItemCategory": "Totem",
+    "StackSize": 1,
+    "Description": "Now people can look at your ugly face."
+  },
+  "murloc": {
+    "ItemCategory": "Totem",
+    "StackSize": 1,
+    "Description": "TBA."
+  },
+  "coffee": {
+    "ItemCategory": "Consumable",
+    "StackSize": 4,
+    "Description": "Gives you plenty of energy!."
   }
 }

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/head.png-09d61bef218973ff6b1ef50824ccbb79.stex"
+path="res://.import/shoes - chart 3.png-a97321ce13b38a713430ad9c3568ba6f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Inventory/icons/head.png"
-dest_files=[ "res://.import/head.png-09d61bef218973ff6b1ef50824ccbb79.stex" ]
+source_file="res://graphics/Player/shoes - chart 3.png"
+dest_files=[ "res://.import/shoes - chart 3.png-a97321ce13b38a713430ad9c3568ba6f.stex" ]
 
 [params]
 

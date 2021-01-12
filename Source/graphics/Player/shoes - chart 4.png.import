@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ISIC.png-90ec448ea3c7910fa22423408199ab6d.stex"
+path="res://.import/shoes - chart 4.png-4cd723a5bf0d6bdd497eb649fa1675cd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Inventory/icons/ISIC.png"
-dest_files=[ "res://.import/ISIC.png-90ec448ea3c7910fa22423408199ab6d.stex" ]
+source_file="res://graphics/Player/shoes - chart 4.png"
+dest_files=[ "res://.import/shoes - chart 4.png-4cd723a5bf0d6bdd497eb649fa1675cd.stex" ]
 
 [params]
 

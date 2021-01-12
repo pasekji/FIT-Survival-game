@@ -10,6 +10,8 @@ var inventory = {
 func add_item(item_name, item_quantity):
 	for item in inventory:
 		if inventory[item][0] == item_name:
+			if item_name == 'isic':
+				return
 			var stack_size = int(JsonData.item_data[item_name]["StackSize"])
 			var able_to_add = stack_size - inventory[item][1]
 			if able_to_add >= item_quantity:

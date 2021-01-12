@@ -8,19 +8,18 @@ var player = null
 var being_picked_up = false
 
 func _ready():
-	$Sprite.texture = load("res://src/Inventory/icons/" + item_name + ".png")
+	$Sprite.texture = load("res://graphics/icons/" + item_name + ".png")
 	
 func _physics_process(delta):
 	if being_picked_up == true:
+		if item_name == 'isic':
+			Global.ISIC = true
 		var direction = global_position.direction_to(player.global_position)
 		velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
 		
 		var distance = global_position.distance_to(player.global_position)
 		if distance < 4:
-			print("a")
 			PlayerInventory.add_item(item_name, 1)
-			if item_name == "ISIC":
-				Global.ISIC = true
 			queue_free()
 		velocity = move_and_slide(velocity, Vector2.UP)
 
