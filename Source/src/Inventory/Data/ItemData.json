@@ -23,5 +23,10 @@
     "ItemCategory": "Consumable",
     "StackSize": 4,
     "Description": "Gives you plenty of energy!."
+  },
+  "coffee-cup": {
+    "ItemCategory": "Trash",
+    "StackSize": 10,
+    "Description": "Even though it's useless there is use for it."
   }
 }

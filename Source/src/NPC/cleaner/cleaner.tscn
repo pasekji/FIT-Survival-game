@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://graphics/Player/np5.png" type="Texture" id=1]
+[ext_resource path="res://src/NPC/cleaner/cleaner.gd" type="Script" id=2]
+[ext_resource path="res://graphics/Player/RpgCharacterShadow.png" type="Texture" id=3]
+[ext_resource path="res://src/NPC/cleaner/PickUpArea.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12.5605, 29.2716 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2561.82, 2145.01 )
+
+[node name="Cleaner" type="KinematicBody2D"]
+scale = Vector2( 3, 3 )
+collision_layer = 64
+collision_mask = 2147483663
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -10 )
+shape = SubResource( 1 )
+
+[node name="Shadow" type="Sprite" parent="."]
+scale = Vector2( 2.60443, 1.34451 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -34, -76 )
+texture = ExtResource( 1 )
+centered = false
+vframes = 4
+hframes = 3
+frame = 11
+
+[node name="PickUpArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 32
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpArea"]
+visible = false
+position = Vector2( 37.7977, 65.5159 )
+shape = SubResource( 2 )
+[connection signal="body_entered" from="PickUpArea" to="PickUpArea" method="_on_PickUpArea_body_entered"]

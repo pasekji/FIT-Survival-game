@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/np5.png-de3f70acffa789322e9152c7c3101dc3.stex"
+path="res://.import/coffee-cup.png-8992dec3c07c1b2e03d38877d0e027b2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/Player/np5.png"
-dest_files=[ "res://.import/np5.png-de3f70acffa789322e9152c7c3101dc3.stex" ]
+source_file="res://graphics/icons/coffee-cup.png"
+dest_files=[ "res://.import/coffee-cup.png-8992dec3c07c1b2e03d38877d0e027b2.stex" ]
 
 [params]
 

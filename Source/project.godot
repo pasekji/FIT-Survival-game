@@ -80,6 +80,7 @@ pickup={
 2d_physics/layer_4="world"
 2d_physics/layer_5="portals"
 2d_physics/layer_6="collectibles"
+2d_physics/layer_7="NPC"
 
 [rendering]
 

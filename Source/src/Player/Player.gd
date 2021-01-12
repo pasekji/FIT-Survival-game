@@ -56,5 +56,5 @@ func anim_switch(animation):
 func pickup():
 	if $PickUpArea.items_in_range.size() > 0:
 		var pickup_item = $PickUpArea.items_in_range.values()[0]
-		pickup_item.pick_up_item(self)
+		pickup_item.pick_up_item(self, true)
 		$PickUpArea.items_in_range.erase(pickup_item)
