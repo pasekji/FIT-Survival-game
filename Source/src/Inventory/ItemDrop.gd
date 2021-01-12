@@ -3,13 +3,12 @@ extends KinematicBody2D
 const ACCELERATION = 460
 const MAX_SPEED = 225
 var velocity = Vector2.ZERO
-var item_name
-
+export (String) var item_name 
 var player = null
 var being_picked_up = false
 
 func _ready():
-	item_name = "coin"
+	$Sprite.texture = load("res://src/Inventory/icons/" + item_name + ".png")
 	
 func _physics_process(delta):
 	if being_picked_up == true:
@@ -18,7 +17,10 @@ func _physics_process(delta):
 		
 		var distance = global_position.distance_to(player.global_position)
 		if distance < 4:
+			print("a")
 			PlayerInventory.add_item(item_name, 1)
+			if item_name == "ISIC":
+				Global.ISIC = true
 			queue_free()
 		velocity = move_and_slide(velocity, Vector2.UP)
 

@@ -5,10 +5,6 @@ const ItemClass = preload("res://src/Inventory/Item.gd")
 const NUM_INVENTORY_SLOTS = 20
 
 var inventory = {
-	0: ["coin", 1],  #--> slot_index: [item_name, item_quantity]
-	1: ["coin", 1],  #--> slot_index: [item_name, item_quantity]
-	2: ["head", 98],
-	3: ["head", 45],
 }
 
 func add_item(item_name, item_quantity):
