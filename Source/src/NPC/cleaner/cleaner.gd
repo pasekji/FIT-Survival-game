@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const ACCELERATION = 460
-const MAX_SPEED = 225
+const MAX_SPEED = 800
 var velocity = Vector2.ZERO
 export (String) var item_name 
 export (Vector2) var scene_position = Vector2.ZERO
@@ -23,16 +23,14 @@ func _physics_process(_delta):
 			var direction = global_position.direction_to(goal.global_position)
 			velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION)
 			velocity = move_and_slide(velocity, Vector2.UP)
-			$Dialogue.set_position(self.position)
+			$Dialogue/Popup/Panel.set_global_position(self.global_position)
 
 
 func select_goal():
 	var goals = Global.coffee_cups.keys()
-	print(goals)
 	if goals.size() > 0:
 		var goal = Global.coffee_cups[goals[0]]
-		print(goal)
-		print(Global.coffee_cups.erase(goals[0]))
+		Global.coffee_cups.erase(goals[0])
 		return goal
 
 func pickup():
@@ -46,7 +44,6 @@ func pickup():
 func _on_Timer_timeout():
 	if is_instance_valid(goal) == false && goal == null:
 		goal = select_goal()
-		print("here", goal)
 
 
 func _process(_delta):
@@ -59,7 +56,6 @@ func dialogue(index):
 	if index < dialog.size():
 		$Dialogue/Popup.show()
 		$Dialogue/Popup/Panel/RichTextLabel.text = dialog[index]
-		index += 1
 	else:
 		$Dialogue/Popup.hide()
 

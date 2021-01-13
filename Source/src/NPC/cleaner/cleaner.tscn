@@ -49,6 +49,10 @@ wait_time = 0.1
 autostart = true
 
 [node name="Dialogue" parent="." instance=ExtResource( 5 )]
+margin_left = 193.0
+margin_top = 275.0
+margin_right = 193.0
+margin_bottom = 275.0
 dialog = [ "I love my job.", "Clean and shiny! I love it.", "This was once a cappuccino.", "Hey, do you want to help me?", "Collect 10 cups and I can give you something." ]
 [connection signal="body_entered" from="PickUpArea" to="PickUpArea" method="_on_PickUpArea_body_entered"]
 [connection signal="body_exited" from="PickUpArea" to="PickUpArea" method="_on_PickUpArea_body_exited"]

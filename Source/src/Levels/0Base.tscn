@@ -177,6 +177,7 @@ scene_position = Vector2( 500, 500 )
 dialog = [ "I love my job!", "This was a cappucino.", "Do you want to help me?", "Collect 10 cups and I will give you something." ]
 
 [node name="CoffeeCupSpawnTimer" type="Timer" parent="."]
+wait_time = 0.3
 autostart = true
 [connection signal="timeout" from="CoffeeCupSpawnTimer" to="." method="_on_CoffeeCupSpawnTimer_timeout"]
 
