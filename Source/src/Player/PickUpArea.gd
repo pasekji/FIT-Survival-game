@@ -4,7 +4,9 @@ var items_in_range = {}
 
 
 func _on_PickUpArea_body_entered(body):
-	items_in_range[body] = body
+	if body.player == null:
+		items_in_range[body] = body
+		body.player = get_parent()
 
 func _on_PickUpArea_body_exited(body):
 	if items_in_range.has(body):

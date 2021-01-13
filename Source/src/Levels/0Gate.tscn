@@ -32,6 +32,7 @@ tile_data = PoolIntArray( -1245184, 4, 0, -1245183, 4, 0, -1245182, 4, 0, -12451
 
 [node name="Cleaner" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1357, 676 )
+scene_position = Vector2( 800, 800 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1641, 1303 )

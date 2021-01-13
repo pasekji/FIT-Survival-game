@@ -137,7 +137,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=10]
-radius = 112.971
+radius = 196.88
 
 [node name="PLAYER" type="KinematicBody2D"]
 collision_mask = 31

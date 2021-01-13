@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-const ACCELERATION = 460
-const MAX_SPEED = 225
+const ACCELERATION = 8000
+const MAX_SPEED = 500
 var velocity = Vector2.ZERO
 export (String) var item_name 
 var player = null
@@ -16,9 +16,8 @@ func _physics_process(delta):
 			Global.ISIC = true
 		var direction = global_position.direction_to(player.global_position)
 		velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
-		
 		var distance = global_position.distance_to(player.global_position)
-		if distance < 4:
+		if distance < 100:
 			if player.name == "Player":
 				PlayerInventory.add_item(item_name, 1)
 			queue_free()
