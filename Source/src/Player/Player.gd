@@ -32,7 +32,7 @@ func controls_loop():
 
 func movement_loop():
 	var motion = movedir.normalized() * SPEED
-	move_and_slide(motion, Vector2(0,0))
+	move_and_slide(motion, Vector2.ZERO)
 
 
 func spritedir_loop():
@@ -58,3 +58,4 @@ func pickup():
 		var pickup_item = $PickUpArea.items_in_range.values()[0]
 		pickup_item.pick_up_item(self, true)
 		$PickUpArea.items_in_range.erase(pickup_item)
+
