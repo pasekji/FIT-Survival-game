@@ -6,7 +6,7 @@
 [ext_resource path="res://src/Player/PickUpArea.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 73.0684, 105.004 )
+extents = Vector2( 44.7083, 101.072 )
 
 [sub_resource type="Animation" id=2]
 length = 0.05
@@ -137,9 +137,9 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=10]
-radius = 196.88
+radius = 405.074
 
-[node name="PLAYER" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D"]
 collision_mask = 95
 script = ExtResource( 1 )
 
