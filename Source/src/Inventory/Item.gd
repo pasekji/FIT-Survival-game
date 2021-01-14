@@ -24,3 +24,11 @@ func set_item(nm, qt):
 func decrease_item_quantity(amount_to_remove):
 	item_quantity -= amount_to_remove
 	$Label.text = String(item_quantity)
+
+
+func _on_TextureRect_mouse_entered():
+	$Description.show()
+
+
+func _on_TextureRect_mouse_exited():
+	$Description.hide()

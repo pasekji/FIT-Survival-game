@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/Inventory/Item.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://src/Inventory/ItemDescription.gd" type="Script" id=3]
 
 [node name="Item" type="Node2D"]
 z_index = 1
@@ -29,3 +30,16 @@ text = "99"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Description" type="Label" parent="."]
+margin_left = 22.0
+margin_top = -12.0
+margin_right = 77.0
+margin_bottom = 4.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="mouse_entered" from="TextureRect" to="." method="_on_TextureRect_mouse_entered"]
+[connection signal="mouse_entered" from="TextureRect" to="Description" method="_on_TextureRect_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect" to="." method="_on_TextureRect_mouse_exited"]
