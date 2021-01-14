@@ -34,10 +34,10 @@ func spawnReturn():
 	get_parent().call_deferred("add_child", returnPath)
 
 func _on_Area2D_body_entered(body):
-	print(body.name)
 	if body.name == 'Player' and $Timer.is_stopped():
 		index = 0
 		_load_dialog()
 	if body.name == 'CafeteriaLady':
 		index = 1
-		$Timer.start(3)
+		$Timer.start(2)
+

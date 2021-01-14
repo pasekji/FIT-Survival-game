@@ -6,7 +6,7 @@
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 192, 0, 0, 0, 0, 128, 256, 0, 0, 0, 0, 265, 272, 0, 0, 0, 0, 467, 272, 0, 0, 0, 0, 544, 288, 0, 0, 0, 0, 672, 320, 0, 0, 0, 0, 797, 484, 0, 0, 0, 0, 928, 608, 0, 0, 0, 0, 1170, 608, 0, 0, 0, 0, 1335, 642, 0, 0, 0, 0, 1372, 854 )
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 192, 0, 0, 0, 0, 128, 256, 0, 0, 0, 0, 265, 272, 0, 0, 0, 0, 467, 272, 0, 0, 0, 0, 544, 288, 0, 0, 0, 0, 672, 320, 0, 0, 0, 0, 797, 484, 0, 0, 0, 0, 944, 544, 0, 0, 0, 0, 1168, 544, 0, 0, 0, 0, 1335, 642, 0, 0, 0, 0, 1372, 854 )
 }
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -58,3 +58,4 @@ collision_mask = 73
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Cafeguest/Area2D"]
 shape = SubResource( 3 )
 [connection signal="body_entered" from="PathFollow2D/Cafeguest/Area2D" to="PathFollow2D/Cafeguest" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="PathFollow2D/Cafeguest/Area2D" to="PathFollow2D/Cafeguest" method="_on_Area2D_body_exited"]

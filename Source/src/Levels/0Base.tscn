@@ -1,19 +1,16 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/Function Objects/DoorPortal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=3]
 [ext_resource path="res://graphics/fit-env-assets/fit-env-assets.png" type="Texture" id=4]
 [ext_resource path="res://assets/floor.png" type="Texture" id=5]
-[ext_resource path="res://src/UI/UserInterface.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/NPC/cleaner/cleaner.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Levels/0Base.gd" type="Script" id=8]
 
 [node name="0Base" type="Node2D"]
 z_as_relative = false
 script = ExtResource( 8 )
-
-[node name="UserInterface" parent="." instance=ExtResource( 6 )]
 
 [node name="Floorimage" type="TextureRect" parent="."]
 margin_right = 4000.0
@@ -26,9 +23,10 @@ __meta__ = {
 }
 
 [node name="Floorimage2" type="TextureRect" parent="Floorimage"]
-anchor_left = 0.984
-anchor_right = 0.984
-anchor_bottom = 0.012
+anchor_left = 0.984078
+anchor_top = -6.60496e-05
+anchor_right = 0.984078
+anchor_bottom = 0.011934
 margin_left = 1.68994
 margin_top = 48.2642
 margin_right = 4201.69
@@ -99,7 +97,7 @@ player_spawn_location = Vector2( 1200, 300 )
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="TableCafe2" type="StaticBody2D" parent="Node2D"]
-position = Vector2( 1412.49, 2882.94 )
+position = Vector2( 5572, 1526 )
 scale = Vector2( 15, 15 )
 collision_layer = 2147483656
 collision_mask = 7
@@ -117,7 +115,7 @@ region_rect = Rect2( 97, 145, 71, 23 )
 polygon = PoolVector2Array( -10.4071, 0.254059, 11.5519, 9.91074, 33.9079, -0.142792, 34.437, -9.53491, 11.4197, 2.10603, -11.8622, -9.79948, -33.0276, 0.783195, -34.0858, 4.48713, -31.5724, 7.00052 )
 
 [node name="TableCafe3" type="StaticBody2D" parent="Node2D"]
-position = Vector2( 2420.81, 3267.08 )
+position = Vector2( 5125, 3747 )
 rotation = 0.436332
 scale = Vector2( 15, 15 )
 collision_layer = 2147483656
@@ -136,7 +134,7 @@ region_rect = Rect2( 96, 170, 48, 22 )
 polygon = PoolVector2Array( -0.0970764, 10.4958, -23.8203, -0.991173, -20.0745, -9.48158, -1.34564, 1.25629, 18.1323, -7.98328, 21.8781, -1.74033 )
 
 [node name="TableCafe4" type="StaticBody2D" parent="Node2D"]
-position = Vector2( 2887.36, 2518.7 )
+position = Vector2( 5167, 2623 )
 rotation = -2.17992
 scale = Vector2( 15, 15 )
 collision_layer = 2147483656
@@ -155,7 +153,7 @@ region_rect = Rect2( 95, 96, 49, 25 )
 polygon = PoolVector2Array( -22.0681, 0.0962219, 0.381165, 9.82422, 22.2692, -0.465019, 19.8372, -5.14194, 0.381165, 3.4636, -17.017, -4.58071 )
 
 [node name="Table" type="StaticBody2D" parent="Node2D"]
-position = Vector2( 1631.29, 2318.08 )
+position = Vector2( 4423, 2078 )
 scale = Vector2( 1.5, 1.5 )
 __meta__ = {
 "_edit_group_": true
@@ -172,12 +170,12 @@ region_rect = Rect2( 144, 96, 48, 24 )
 polygon = PoolVector2Array( 6.07568, 3.56903, 112.863, 48.9536, 163.587, 48.9536, 315.759, -36.4762, 314.424, -128.58, 143.564, -40.4807, 118.202, -40.4807, -62.0011, -128.58, -63.3359, -39.1458 )
 
 [node name="Cleaner" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3520, 3511 )
-scene_position = Vector2( 500, 500 )
-dialog = [ "I love my job!", "This was a cappucino.", "Do you want to help me?", "Collect 10 cups and I will give you something." ]
+position = Vector2( 2064, 2629 )
+scene_position = Vector2( 2000, 2500 )
+dialog = [ "I love my job!", "This was a cappucino.", "Do you want to help me?", "Collect 10 cups and I will give you something.", "Thank you so much!", "Did you drank them all?", "Here are my backup keys!", "Here are my backup keys!" ]
 
 [node name="CoffeeCupSpawnTimer" type="Timer" parent="."]
-wait_time = 0.3
+wait_time = 0.01
 autostart = true
 [connection signal="timeout" from="CoffeeCupSpawnTimer" to="." method="_on_CoffeeCupSpawnTimer_timeout"]
 

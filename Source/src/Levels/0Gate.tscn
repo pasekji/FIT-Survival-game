@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Objects/TableBlue.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/floor.png" type="Texture" id=3]
 [ext_resource path="res://src/Function Objects/DoorPortal.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/UI/UserInterface.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=6]
 [ext_resource path="res://src/NPC/gatekeeper/gatekeeper.tscn" type="PackedScene" id=7]
 
@@ -38,7 +37,7 @@ position = Vector2( 1200, -60 )
 [node name="Portal" parent="0Base" index="2"]
 position = Vector2( -46, 114 )
 next_scene_path = "res://src/Levels/0Base.tscn"
-player_spawn_location = Vector2( 3100, 3800 )
+player_spawn_location = Vector2( 3800, 3100 )
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -59,7 +58,5 @@ position = Vector2( 640, 1018 )
 
 [node name="GateKeeper" parent="." instance=ExtResource( 7 )]
 position = Vector2( 316, 458 )
-
-[node name="UserInterface" parent="." instance=ExtResource( 5 )]
 
 [editable path="0Base"]

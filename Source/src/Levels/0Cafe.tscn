@@ -36,8 +36,8 @@ __meta__ = {
 position = Vector2( 1400, 300 )
 
 [node name="CafeteriaLady" parent="." instance=ExtResource( 6 )]
-position = Vector2( 230, 435 )
-dialog = [ "Long day honey?", "Hello, how can I help you?", "Here, have a nice day.", "", "", "What would you like to buy?", "But you have no money! Come back later..." ]
+position = Vector2( 229, 434 )
+dialog = [ "Long day honey?", "Hello, how can I help you?", "Here, have a nice day.", "What would you like to buy?", "But you have no money! Come back later..." ]
 
 [node name="0Base" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1400, -60 )

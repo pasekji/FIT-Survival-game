@@ -20,3 +20,8 @@ func _on_Area2D_body_entered(body):
 	if body.name == 'Player':
 		index = 0
 		_load_dialog()
+
+
+func _on_Area2D_body_exited(body):
+	index = 200
+	_load_dialog()

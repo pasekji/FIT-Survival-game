@@ -12,6 +12,7 @@ func _on_CoffeeCupSpawnTimer_timeout():
 		var position = Vector2(x,y)
 		spawn_coffee(position)
 
+
 func spawn_coffee(position):
 	var coffee_cup = item_drop.instance()
 	coffee_cup.item_name = "coffee-cup"

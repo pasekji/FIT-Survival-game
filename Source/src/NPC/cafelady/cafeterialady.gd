@@ -7,6 +7,7 @@ const path = preload("res://src/Paths/CafeGuestPath.tscn")
 var spawned = false
 var focus = 'Player'
 var index = 1
+
 func _ready():
 	_load_dialog(0)
 
@@ -19,7 +20,7 @@ func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		if player_buys:
 			player_response = true
-			_load_dialog(6)
+			_load_dialog(4)
 			player_buys = false
 			player_response = false
 			focus = 'Cafeguest'
@@ -32,10 +33,11 @@ func _process(_delta):
 func guest():
 	var guest = path.instance()
 	get_parent().call_deferred("add_child", guest)
+	spawned = true
 	
 func _on_Area2D_body_entered(body):
 	if body.name == 'Player' and body.name == focus:
-		_load_dialog(5)
+		_load_dialog(3)
 		player_buys = true
 	if body.name == 'Cafeguest' and body.name == focus:
 		_load_dialog(index)
@@ -43,8 +45,12 @@ func _on_Area2D_body_entered(body):
 
 
 func _on_Timer_timeout():
-	if index == 3:
-		index = 1
-		$Timer.stop()
+	if focus == 'Player':
+		if index == 2:
+			index = 1
+	if focus == 'Cafeguest':
+			if index == 3:
+				index = 1
+				focus = 'Player'
 	index = index + 1
 	_load_dialog(index)

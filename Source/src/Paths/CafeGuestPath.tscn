@@ -62,5 +62,4 @@ shape = SubResource( 3 )
 
 [node name="Timer" type="Timer" parent="PathFollow2D/Cafeguest"]
 [connection signal="body_entered" from="PathFollow2D/Cafeguest/Area2D" to="PathFollow2D/Cafeguest" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="PathFollow2D/Cafeguest/Area2D" to="PathFollow2D/Cafeguest" method="_on_Area2D_body_exited"]
 [connection signal="timeout" from="PathFollow2D/Cafeguest/Timer" to="PathFollow2D/Cafeguest" method="_on_Timer_timeout"]

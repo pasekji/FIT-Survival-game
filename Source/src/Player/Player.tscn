@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://graphics/Player/player-spritesheet.png" type="Texture" id=2]
 [ext_resource path="res://graphics/Player/RpgCharacterShadow.png" type="Texture" id=3]
 [ext_resource path="res://src/Player/PickUpArea.gd" type="Script" id=4]
+[ext_resource path="res://src/UI/UserInterface.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 44.7083, 101.072 )
@@ -190,5 +191,9 @@ script = ExtResource( 4 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpArea"]
 position = Vector2( -3.65109, -42.5027 )
 shape = SubResource( 10 )
+
+[node name="UserInterface" parent="." instance=ExtResource( 5 )]
+offset = Vector2( 50, 50 )
+transform = Transform2D( 1, 0, 0, 1, 50, 50 )
 [connection signal="body_entered" from="PickUpArea" to="PickUpArea" method="_on_PickUpArea_body_entered"]
 [connection signal="body_exited" from="PickUpArea" to="PickUpArea" method="_on_PickUpArea_body_exited"]
