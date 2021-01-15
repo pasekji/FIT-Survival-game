@@ -6,7 +6,7 @@ func _ready():
 	pass
 
 
-func _process(delta):
+func _process(_delta):
 	if bodies.size() > 0 and Input.is_action_just_pressed("ui_accept"):
 		$InstructionsTalk.hide()
 

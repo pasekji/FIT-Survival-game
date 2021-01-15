@@ -17,8 +17,10 @@ func add_item(item_name, item_quantity):
 	if item_name == 'coffee-cup' and Global.cups10 == false:
 		check_quest10()
 	if item_name == 'backup-keys':
-		print("here")
+		Global.backup_keys = true
 		erase_quest_item()
+	if item_name == 'keyboard':
+		Global.keyboard = true
 	for item in inventory:
 		if inventory[item][0] == item_name:
 			var stack_size = int(JsonData.item_data[item_name]["StackSize"])

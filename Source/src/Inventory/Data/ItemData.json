@@ -28,5 +28,11 @@
     "ItemCategory": "Trash",
     "StackSize": 10,
     "Description": "Even though it's useless there is use for it."
-  }
+  },
+  "keyboard": {
+    "ItemCategory": "Trash",
+    "StackSize": 1,
+    "Description": "He knows his keyboard."
+  },
+
 }

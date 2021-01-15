@@ -101,7 +101,6 @@ position = Vector2( 3800, 2200 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Question1" type="GridContainer" parent="CanvasLayer"]
-visible = false
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -110,6 +109,7 @@ margin_left = -280.0
 margin_top = -100.0
 margin_right = 280.0
 rect_min_size = Vector2( 560, 100 )
+mouse_filter = 0
 columns = 3
 __meta__ = {
 "_edit_use_anchors_": false
@@ -136,37 +136,11 @@ rect_min_size = Vector2( 100, 100 )
 text = "RATHER NOT"
 align = 0
 expand_icon = true
-
-[node name="Question2" type="GridContainer" parent="CanvasLayer"]
-visible = false
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -125.0
-margin_top = -100.0
-margin_right = 125.0
-rect_min_size = Vector2( 250, 100 )
-columns = 2
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="CanvasLayer/Question2"]
-margin_right = 100.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-text = "ZERO"
-
-[node name="Button2" type="Button" parent="CanvasLayer/Question2"]
-margin_left = 104.0
-margin_right = 204.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-text = "ONE"
+[connection signal="mouse_exited" from="CanvasLayer/Question1/Button" to="." method="_on_Button_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Question1/Button" to="." method="q1b1"]
+[connection signal="mouse_exited" from="CanvasLayer/Question1/Button2" to="." method="_on_Button2_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Question1/Button2" to="." method="q1b2"]
+[connection signal="mouse_exited" from="CanvasLayer/Question1/Button3" to="." method="_on_Button3_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Question1/Button3" to="." method="q1b3"]
 
 [editable path="0Base"]
