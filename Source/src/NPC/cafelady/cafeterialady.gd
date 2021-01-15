@@ -10,6 +10,7 @@ var index = 1
 
 func _ready():
 	_load_dialog(0)
+	$Dialogue/Popup/Panel.set_global_position(Vector2(self.global_position.x-200, self.global_position.y - 300))
 
 func _load_dialog(dialog_index):
 	if dialog_index < dialog.size():
