@@ -27,7 +27,7 @@ func _physics_process(_delta):
 				var direction = global_position.direction_to(goal.global_position)
 				velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION)
 				velocity = move_and_slide(velocity, Vector2.UP)
-				$Dialogue/Popup/Panel.set_global_position(self.global_position)
+				$Dialogue/Popup/Panel.set_global_position(Vector2(self.global_position.x-200, self.global_position.y - 300))
 
 
 func select_goal():

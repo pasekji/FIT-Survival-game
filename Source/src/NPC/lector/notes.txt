@@ -1,0 +1,36 @@
+Remember we have a distance functiond(x, y)for points.
+To measure the distance 
+between clustersD(A, B) 
+we have several possibilities:
+Single linkage looks for the closest neighbor
+Complete linkage look for the furthest neighbor
+Average linkage something between the last two.
+Ward’s method is D(A, B) =∑x∈A∪B‖x− ̄xA∪B‖2−∑x∈A‖x− ̄xA‖2−∑x∈B‖x− ̄xB‖2
+where ̄xA=1|A|∑x∈A
+
+The full process can be represented via a dendrogram.
+This is a tree that shows the new clusters as they evolve.
+The leaves are the individual points
+and the root is the cluster that contains all.
+The clusters that have been merged at each step
+are joined by a horizontal line.
+We cut the dendrogram at the desired number of clusters.
+We can also specify at which distance within clusters to stop.
+We can determine the place to cut
+by looking at the difference in height of the adjacent peaks
+This type of clustering is agglomerative hierarchical clustering.
+The advantage of this algorithm is
+that we can determine the number of clusters after looking at the dendrogram.
+A disadvantage is the computational cost for large datasets.
+An alternative algorithm that works well in large datasets is in the next slide!
+
+That is k-means
+Unlike hierarchical clustering
+here we need to set k in advance.
+No universal method to do this!
+We treat k as a hyperparameter a
+nd apply a similar test as in the previous lecture.
+In this context, this is called the elbow method. 
+Plotting k against the total within cluster
+sum of squares we look for theinflection point (e.g. the elbow).
+How many clusters did you see?

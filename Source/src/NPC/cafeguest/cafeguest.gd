@@ -9,7 +9,7 @@ var index = 0
 	
 func _physics_process(delta):
 	get_parent().set_offset(get_parent().get_offset() + 400 * delta)
-	$Dialogue/Popup/Panel.set_global_position(self.global_position)
+	$Dialogue/Popup/Panel.set_global_position(Vector2(self.global_position.x + 100, self.global_position.y - 100))
 	
 
 func _load_dialog():
