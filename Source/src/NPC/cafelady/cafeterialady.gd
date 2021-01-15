@@ -39,6 +39,8 @@ func guest():
 	var guest = path.instance()
 	get_parent().call_deferred("add_child", guest)
 	spawned = true
+	$Timer.stop()
+	
 
 
 func _on_Area2D_body_entered(body):
@@ -51,12 +53,9 @@ func _on_Area2D_body_entered(body):
 
 
 func _on_Timer_timeout():
-	if focus == 'Player':
-		if index == 2:
-			index = 1
 	if focus == 'Cafeguest':
-			if index == 3:
-				index = 1
-				focus = 'Player'
-	index = index + 1
-	_load_dialog(index)
+		if index == 3:
+			index = 1
+			focus = 'Player'
+		index = index + 1
+		_load_dialog(index)

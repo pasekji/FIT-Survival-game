@@ -172,7 +172,7 @@ polygon = PoolVector2Array( 6.07568, 3.56903, 112.863, 48.9536, 163.587, 48.9536
 [node name="Cleaner" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2449, 2437 )
 scene_position = Vector2( 2000, 2500 )
-dialog = [ "I love my job!", "This was a cappucino.", "Do you want to help me?", "Collect 10 cups and I will give you something.", "Thank you so much!", "Did you drank them all?", "Here are my backup keys!", "Here are my backup keys!" ]
+dialog = [ "I love my job!", "This was a cappucino.", "Do you want to help me?", "Collect 10 cups and I will give you something.", "Thank you so much!", "Did you drink them all?", "Here are my backup keys!", "Here are my backup keys!" ]
 
 [node name="CoffeeCupSpawnTimer" type="Timer" parent="."]
 wait_time = 0.002
