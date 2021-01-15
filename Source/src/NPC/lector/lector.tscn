@@ -1,0 +1,117 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/fonts/impact_imported.tres" type="DynamicFont" id=1]
+[ext_resource path="res://graphics/Player/RpgCharacterShadow.png" type="Texture" id=2]
+[ext_resource path="res://graphics/Player/np5.png" type="Texture" id=3]
+[ext_resource path="res://src/NPC/lector/lector.gd" type="Script" id=4]
+[ext_resource path="res://src/NPC/lector/fileread.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 42.6667, 48 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 138.769
+
+[node name="Lector" type="KinematicBody2D"]
+position = Vector2( 340, 314 )
+scale = Vector2( 3, 3 )
+collision_layer = 64
+collision_mask = 73
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 5.96046e-08, 1.19209e-07 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="shadow" type="Sprite" parent="."]
+position = Vector2( -22, -9 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 2 )
+centered = false
+region_rect = Rect2( 0, 0, 48, 69 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -10 )
+texture = ExtResource( 3 )
+vframes = 4
+hframes = 3
+frame = 3
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
+
+[node name="TimerLecture" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[node name="fileread" type="Node2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="Dialogue" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -10.6667
+margin_top = -128.0
+margin_right = -10.6667
+margin_bottom = -128.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Popup" type="Popup" parent="Dialogue"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Dialogue/Popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -350.0
+margin_top = -75.0
+margin_right = 350.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 700, 150 )
+rect_clip_content = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialogue/Popup/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -350.0
+margin_top = -31.5
+margin_right = 350.0
+margin_bottom = 31.5
+custom_fonts/normal_font = ExtResource( 1 )
+meta_underlined = false
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="TimerLecture" to="." method="_on_TimerLecture_timeout"]

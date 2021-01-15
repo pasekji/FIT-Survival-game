@@ -22,7 +22,6 @@ _global_script_class_icons={
 
 config/name="FITtmp"
 run/main_scene="res://src/Levels/0Gate.tscn"
-config/icon="res://icon.png"
 
 [autoload]
 

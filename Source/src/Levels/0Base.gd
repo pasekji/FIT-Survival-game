@@ -2,7 +2,7 @@ extends Node2D
 
 const item_drop = preload("res://src/Inventory/ItemDrop.tscn")
 
-var limit = 1000
+var limit = 15
 var key = 0
 
 func _on_CoffeeCupSpawnTimer_timeout():

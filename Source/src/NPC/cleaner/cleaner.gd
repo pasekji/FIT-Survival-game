@@ -94,4 +94,4 @@ func spawnAward():
 	award.item_name = "backup-keys"
 	award.global_position = Vector2(self.global_position.x + 100, self.global_position.y - 100)
 	get_parent().call_deferred("add_child", award)
-	award.set_scale(Vector2(0.5, 0.5))
+	award.set_scale(Vector2(2, 2))

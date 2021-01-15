@@ -1,7 +1,7 @@
 extends Panel
 
 
-var empty_tex = preload("res://icon.png")
+var empty_tex = preload("res://graphics/icons/head.png")
 var default_tex = empty_tex
 
 var default_style: StyleBoxTexture = null

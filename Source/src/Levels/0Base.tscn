@@ -68,7 +68,7 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 7760, 3100 )
+position = Vector2( 3100, 3800 )
 
 [node name="0Cafe" parent="." instance=ExtResource( 1 )]
 position = Vector2( 700, 4092 )
@@ -170,12 +170,12 @@ region_rect = Rect2( 144, 96, 48, 24 )
 polygon = PoolVector2Array( 6.07568, 3.56903, 112.863, 48.9536, 163.587, 48.9536, 315.759, -36.4762, 314.424, -128.58, 143.564, -40.4807, 118.202, -40.4807, -62.0011, -128.58, -63.3359, -39.1458 )
 
 [node name="Cleaner" parent="." instance=ExtResource( 7 )]
-position = Vector2( 2064, 2629 )
+position = Vector2( 2449, 2437 )
 scene_position = Vector2( 2000, 2500 )
 dialog = [ "I love my job!", "This was a cappucino.", "Do you want to help me?", "Collect 10 cups and I will give you something.", "Thank you so much!", "Did you drank them all?", "Here are my backup keys!", "Here are my backup keys!" ]
 
 [node name="CoffeeCupSpawnTimer" type="Timer" parent="."]
-wait_time = 0.1
+wait_time = 0.002
 autostart = true
 [connection signal="timeout" from="CoffeeCupSpawnTimer" to="." method="_on_CoffeeCupSpawnTimer_timeout"]
 
