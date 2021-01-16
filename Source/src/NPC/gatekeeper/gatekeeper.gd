@@ -4,6 +4,9 @@ export(Array, String) var dialog
 
 const item_drop = preload("res://src/Inventory/ItemDrop.tscn")
 
+func _ready():
+	$Dialogue/Popup/Panel.set_global_position(Vector2(self.global_position.x-200, self.global_position.y - 200))
+
 func _load_dialog(dialog_index):
 	if dialog_index < dialog.size():
 		$Dialogue/Popup.show()

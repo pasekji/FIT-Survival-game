@@ -4,12 +4,11 @@
 [ext_resource path="res://src/Inventory/Slot.gd" type="Script" id=3]
 [ext_resource path="res://src/Inventory/Inventory.gd" type="Script" id=4]
 
-[sub_resource type="StreamTexture" id=2]
+[sub_resource type="StreamTexture" id=1]
 flags = 4
-load_path = "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
 
-[sub_resource type="StyleBoxTexture" id=1]
-texture = SubResource( 2 )
+[sub_resource type="StyleBoxTexture" id=2]
+texture = SubResource( 1 )
 region_rect = Rect2( 0, 0, 64, 64 )
 
 [node name="Inventory" type="Node2D"]
@@ -56,7 +55,7 @@ __meta__ = {
 margin_right = 25.0
 margin_bottom = 25.0
 rect_min_size = Vector2( 25, 25 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Slot2" type="Panel" parent="GridContainer"]
@@ -64,7 +63,7 @@ margin_left = 31.0
 margin_right = 56.0
 margin_bottom = 25.0
 rect_min_size = Vector2( 25, 25 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Slot3" type="Panel" parent="GridContainer"]
@@ -72,7 +71,7 @@ margin_left = 62.0
 margin_right = 87.0
 margin_bottom = 25.0
 rect_min_size = Vector2( 25, 25 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Slot4" type="Panel" parent="GridContainer"]
@@ -80,7 +79,7 @@ margin_left = 93.0
 margin_right = 118.0
 margin_bottom = 25.0
 rect_min_size = Vector2( 25, 25 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Slot5" type="Panel" parent="GridContainer"]
@@ -88,7 +87,7 @@ margin_top = 29.0
 margin_right = 25.0
 margin_bottom = 54.0
 rect_min_size = Vector2( 25, 25 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Slot6" type="Panel" parent="GridContainer"]
@@ -97,7 +96,7 @@ margin_top = 29.0
 margin_right = 56.0
 margin_bottom = 54.0
 rect_min_size = Vector2( 25, 25 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Slot7" type="Panel" parent="GridContainer"]
@@ -106,7 +105,7 @@ margin_top = 29.0
 margin_right = 87.0
 margin_bottom = 54.0
 rect_min_size = Vector2( 25, 25 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Slot8" type="Panel" parent="GridContainer"]
@@ -115,7 +114,7 @@ margin_top = 29.0
 margin_right = 118.0
 margin_bottom = 54.0
 rect_min_size = Vector2( 25, 25 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Slot9" type="Panel" parent="GridContainer"]
@@ -123,7 +122,7 @@ margin_top = 58.0
 margin_right = 25.0
 margin_bottom = 83.0
 rect_min_size = Vector2( 25, 25 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Slot10" type="Panel" parent="GridContainer"]
@@ -132,7 +131,7 @@ margin_top = 58.0
 margin_right = 56.0
 margin_bottom = 83.0
 rect_min_size = Vector2( 25, 25 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Slot11" type="Panel" parent="GridContainer"]
@@ -141,7 +140,7 @@ margin_top = 58.0
 margin_right = 87.0
 margin_bottom = 83.0
 rect_min_size = Vector2( 25, 25 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Slot12" type="Panel" parent="GridContainer"]
@@ -150,7 +149,7 @@ margin_top = 58.0
 margin_right = 118.0
 margin_bottom = 83.0
 rect_min_size = Vector2( 25, 25 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Slot13" type="Panel" parent="GridContainer"]
@@ -158,7 +157,7 @@ margin_top = 87.0
 margin_right = 25.0
 margin_bottom = 112.0
 rect_min_size = Vector2( 25, 25 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Slot14" type="Panel" parent="GridContainer"]
@@ -167,7 +166,7 @@ margin_top = 87.0
 margin_right = 56.0
 margin_bottom = 112.0
 rect_min_size = Vector2( 25, 25 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Slot15" type="Panel" parent="GridContainer"]
@@ -176,7 +175,7 @@ margin_top = 87.0
 margin_right = 87.0
 margin_bottom = 112.0
 rect_min_size = Vector2( 25, 25 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Slot16" type="Panel" parent="GridContainer"]
@@ -185,5 +184,5 @@ margin_top = 87.0
 margin_right = 118.0
 margin_bottom = 112.0
 rect_min_size = Vector2( 25, 25 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )

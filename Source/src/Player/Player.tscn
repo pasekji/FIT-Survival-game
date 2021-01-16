@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://src/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://graphics/Player/player-spritesheet.png" type="Texture" id=2]
@@ -140,6 +140,9 @@ tracks/0/keys = {
 [sub_resource type="CircleShape2D" id=10]
 radius = 405.074
 
+[sub_resource type="CircleShape2D" id=11]
+radius = 409.011
+
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 95
 script = ExtResource( 1 )
@@ -161,7 +164,7 @@ anims/walkright = SubResource( 8 )
 anims/walkup = SubResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -3.66365, -42.6154 )
+position = Vector2( -4, -44 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 2 )
 vframes = 4
@@ -194,7 +197,16 @@ position = Vector2( -3.65109, -42.5027 )
 shape = SubResource( 10 )
 
 [node name="UserInterface" parent="." instance=ExtResource( 5 )]
-offset = Vector2( 50, 50 )
-transform = Transform2D( 1, 0, 0, 1, 50, 50 )
+
+[node name="TalkArea" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TalkArea"]
+position = Vector2( -4, -43 )
+shape = SubResource( 11 )
 [connection signal="body_entered" from="PickUpArea" to="PickUpArea" method="_on_PickUpArea_body_entered"]
 [connection signal="body_exited" from="PickUpArea" to="PickUpArea" method="_on_PickUpArea_body_exited"]
+[connection signal="body_entered" from="TalkArea" to="UserInterface" method="_on_TalkArea_body_entered"]
+[connection signal="body_exited" from="TalkArea" to="UserInterface" method="_on_TalkArea_body_exited"]
