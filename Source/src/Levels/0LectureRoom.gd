@@ -2,7 +2,7 @@ extends Node2D
 var dialog_index = 0
 const item_drop = preload("res://src/Inventory/ItemDrop.tscn")
 var next = true
-var quest_started = false
+var quest_started = Global.quest_keyboard_started
 func _ready():
 	$Player.global_position = Vector2(200, 3800)
 	hide_all()
@@ -52,6 +52,7 @@ func q1b2():
 			hide_all()
 			dialog_index = 0
 			quest_started = true
+			Global.quest_keyboard_started = true
 			$Lector.quest_started = true
 			$Lector.dialog_index = 0
 		var next = false
@@ -86,16 +87,12 @@ func spawnBeer():
 
 
 func _on_Button_mouse_exited():
-	print("exited1")
-	
 	next = true
 
 
 func _on_Button2_mouse_exited():
-	print("exited2")	
 	next = true
 
 
 func _on_Button3_mouse_exited():
-	print("exited3")	
 	next = true
