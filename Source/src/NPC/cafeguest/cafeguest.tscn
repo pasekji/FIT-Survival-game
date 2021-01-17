@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://graphics/Player/npc4.png" type="Texture" id=1]
+[ext_resource path="res://src/NPC/cafeguest/cafeguest.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15, 33 )
+
+[node name="Cafeguest" type="KinematicBody2D"]
+scale = Vector2( 3, 3 )
+collision_layer = 64
+collision_mask = 9
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -15 )
+texture = ExtResource( 1 )
+vframes = 4
+hframes = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )

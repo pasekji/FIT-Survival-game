@@ -1,0 +1,38 @@
+{
+  "coin": {
+    "ItemCategory": "Money",
+    "StackSize": 99,
+    "Description": "Money for trading."
+  },
+  "isic": {
+    "ItemCategory": "Totem",
+    "StackSize": 1,
+    "Description": "You need this to open doors."
+  },
+  "facemask": {
+    "ItemCategory": "Totem",
+    "StackSize": 1,
+    "Description": "Now people can look at your ugly face."
+  },
+  "backup-keys": {
+    "ItemCategory": "Totem",
+    "StackSize": 1,
+    "Description": "There are many uses for a key. Try it!"
+  },
+  "coffee": {
+    "ItemCategory": "Consumable",
+    "StackSize": 4,
+    "Description": "Gives you plenty of energy!."
+  },
+  "coffee-cup": {
+    "ItemCategory": "Trash",
+    "StackSize": 10,
+    "Description": "Even though it's useless there is use for it."
+  },
+  "keyboard": {
+    "ItemCategory": "Trash",
+    "StackSize": 1,
+    "Description": "He knows his keyboard."
+  },
+
+}
