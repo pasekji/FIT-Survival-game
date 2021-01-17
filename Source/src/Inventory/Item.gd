@@ -2,6 +2,7 @@ extends Node2D
 
 var item_name
 var item_quantity
+var item_description = ''
 
 
 func add_item_quantity(amount_to_add):
@@ -15,6 +16,7 @@ func set_item(nm, qt):
 	$TextureRect.texture = load("res://graphics/icons/" + item_name + ".png")
 	
 	var stack_size = int(JsonData.item_data[item_name]["StackSize"])
+	item_description = JsonData.item_data[item_name]["Description"]
 	if stack_size == 1:
 		$Label.visible = false
 	else:

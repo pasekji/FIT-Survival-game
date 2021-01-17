@@ -22,8 +22,10 @@ func _ready():
 func refresh_style():
 	if item == null:
 		set('custom_styles/panel', empty_style)
+		self.hint_tooltip = ''
 	else:
 		set('custom_styles/panel', default_style)
+		self.hint_tooltip = item.item_description
 		
 func pickFromSlot():
 	remove_child(item)
