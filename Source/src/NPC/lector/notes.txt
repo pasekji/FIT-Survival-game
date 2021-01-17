@@ -33,4 +33,10 @@ nd apply a similar test as in the previous lecture.
 In this context, this is called the elbow method. 
 Plotting k against the total within cluster
 sum of squares we look for theinflection point (e.g. the elbow).
+<<<<<<< HEAD
 How many clusters did you see?
+=======
+How many clusters do you see?
+Thank you! Here, you are admitted.
+You still don't have it.
+>>>>>>> matej_dev

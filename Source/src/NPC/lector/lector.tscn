@@ -67,6 +67,8 @@ margin_left = -10.6667
 margin_top = -128.0
 margin_right = -10.6667
 margin_bottom = -128.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -88,11 +90,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -350.0
-margin_top = -75.0
+margin_top = -150.0
 margin_right = 350.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 700, 150 )
+margin_bottom = 150.0
+rect_min_size = Vector2( 700, 300 )
 rect_clip_content = true
+size_flags_horizontal = 3
+size_flags_vertical = 3
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -104,9 +108,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -350.0
-margin_top = -31.5
+margin_top = -150.0
 margin_right = 350.0
-margin_bottom = 31.5
+margin_bottom = -50.0
+rect_min_size = Vector2( 700, 300 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_fonts/normal_font = ExtResource( 1 )
 meta_underlined = false
 fit_content_height = true
@@ -114,4 +121,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
 [connection signal="timeout" from="TimerLecture" to="." method="_on_TimerLecture_timeout"]

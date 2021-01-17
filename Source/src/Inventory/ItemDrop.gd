@@ -9,6 +9,8 @@ var being_picked_up = false
 
 func _ready():
 	$Sprite.texture = load("res://graphics/icons/" + item_name + ".png")
+	if Global.keyboard and item_name == "keyboard":
+		queue_free()
 	
 func _physics_process(delta):
 	if being_picked_up == true:

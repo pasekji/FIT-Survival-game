@@ -8,6 +8,7 @@ func _ready():
 	self.global_position = Global.player_initial_map_position
 
 
+
 func _physics_process(_delta):
 		controls_loop()
 		movement_loop()
@@ -58,4 +59,3 @@ func pickup():
 		var pickup_item = $PickUpArea.items_in_range.values()[0]
 		pickup_item.pick_up_item(self, true)
 		$PickUpArea.items_in_range.erase(pickup_item)
-
