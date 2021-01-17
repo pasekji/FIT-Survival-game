@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/npc4.png-7f89c5a525b6e3ca4f72df787fd96e6d.stex"
+path="res://.import/npc1-sitting-side.png-c32b4304eaf81bf32e65854f09fc4016.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/Player/npc4.png"
-dest_files=[ "res://.import/npc4.png-7f89c5a525b6e3ca4f72df787fd96e6d.stex" ]
+source_file="res://graphics/Player/npc1-sitting-side.png"
+dest_files=[ "res://.import/npc1-sitting-side.png-c32b4304eaf81bf32e65854f09fc4016.stex" ]
 
 [params]
 

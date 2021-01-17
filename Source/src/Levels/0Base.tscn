@@ -120,7 +120,6 @@ texture = ExtResource( 9 )
 position = Vector2( -48, 108 )
 script = ExtResource( 10 )
 next_scene_path = "res://src/Levels/0Secret.tscn"
-player_spawn_location = Vector2( 0, 0 )
 
 [node name="Node2D" type="Node2D" parent="."]
 
