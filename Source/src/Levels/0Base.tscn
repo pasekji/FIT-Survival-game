@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Function Objects/DoorPortal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Player/Player.tscn" type="PackedScene" id=2]
@@ -10,9 +10,13 @@
 [ext_resource path="res://src/Levels/0Base.gd" type="Script" id=8]
 [ext_resource path="res://graphics/doors and windows/door-black.png" type="Texture" id=9]
 [ext_resource path="res://src/Function Objects/PortalSecret.gd" type="Script" id=10]
+[ext_resource path="res://graphics/fit-env-assets/cafeco.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 66.7734, 107.565 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 91.3496, 235.933 )
 
 [node name="0Base" type="Node2D"]
 z_as_relative = false
@@ -120,6 +124,7 @@ texture = ExtResource( 9 )
 position = Vector2( -48, 108 )
 script = ExtResource( 10 )
 next_scene_path = "res://src/Levels/0Secret.tscn"
+player_spawn_location = Vector2( 0, 0 )
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -195,6 +200,16 @@ region_rect = Rect2( 144, 96, 48, 24 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Table"]
 polygon = PoolVector2Array( 6.07568, 3.56903, 112.863, 48.9536, 163.587, 48.9536, 315.759, -36.4762, 314.424, -128.58, 143.564, -40.4807, 118.202, -40.4807, -62.0011, -128.58, -63.3359, -39.1458 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+position = Vector2( 7846.12, 2495.48 )
+
+[node name="Sprite" type="Sprite" parent="Node2D/StaticBody2D"]
+scale = Vector2( 10, 10 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+shape = SubResource( 2 )
 
 [node name="Cleaner" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2449, 2437 )

@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Objects/TableBlue.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/floor.png" type="Texture" id=3]
 [ext_resource path="res://src/Function Objects/DoorPortal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://graphics/fit-env-assets/trashbin1.png" type="Texture" id=5]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=6]
 [ext_resource path="res://src/NPC/gatekeeper/gatekeeper.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 40.9214, 177.507 )
 
 [node name="0Gate" type="Node2D"]
 __meta__ = {
@@ -55,6 +59,18 @@ position = Vector2( 640, 832 )
 
 [node name="Table21" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( 640, 1018 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+position = Vector2( 1801.9, 237.844 )
+
+[node name="Sprite" type="Sprite" parent="Node2D/StaticBody2D"]
+position = Vector2( 21.2571, -6.7853 )
+scale = Vector2( 16.0002, 14.6915 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2( 22.7698, -8.05243 )
+shape = SubResource( 1 )
 
 [node name="GateKeeper" parent="." instance=ExtResource( 7 )]
 position = Vector2( 316, 458 )
