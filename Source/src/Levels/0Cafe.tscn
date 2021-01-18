@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/floor.png" type="Texture" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://src/Levels/StaticBody2D2.gd" type="Script" id=9]
 [ext_resource path="res://graphics/Player/npc5-sitting-back.png" type="Texture" id=10]
 [ext_resource path="res://src/Levels/StaticBody2D3.gd" type="Script" id=11]
+[ext_resource path="res://graphics/icons/coffee.png" type="Texture" id=12]
+[ext_resource path="res://graphics/icons/facemask.png" type="Texture" id=13]
+[ext_resource path="res://graphics/icons/item-pamphlet.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40.8965, 171.175 )
@@ -116,51 +119,79 @@ position = Vector2( 564.303, 1061.24 )
 collision_layer = 8
 collision_mask = 65
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+[node name="Bar" type="StaticBody2D" parent="Node2D"]
 position = Vector2( 306.222, 536.085 )
 collision_layer = 8
 collision_mask = 65
 
-[node name="Sprite" type="Sprite" parent="Node2D/StaticBody2D"]
+[node name="Sprite" type="Sprite" parent="Node2D/Bar"]
 position = Vector2( 12.6849, -131.317 )
 scale = Vector2( 4.51959, 7.80975 )
 texture = ExtResource( 7 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Bar"]
 position = Vector2( 13.4123, -134.689 )
 shape = SubResource( 1 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Node2D"]
+[node name="BlondeGuest" type="StaticBody2D" parent="Node2D"]
 position = Vector2( 1460.36, 448.748 )
 script = ExtResource( 9 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/StaticBody2D2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/BlondeGuest"]
 anims/sitting = SubResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/BlondeGuest"]
 shape = SubResource( 3 )
 
-[node name="Sprite" type="Sprite" parent="Node2D/StaticBody2D2"]
+[node name="Sprite" type="Sprite" parent="Node2D/BlondeGuest"]
 position = Vector2( -0.106079, -0.231567 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 8 )
 hframes = 2
 frame = 1
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="Node2D"]
+[node name="Cafe2" type="Sprite" parent="Node2D/BlondeGuest"]
+position = Vector2( -883.36, 542.252 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 12 )
+
+[node name="Facemask2" type="Sprite" parent="Node2D/BlondeGuest"]
+position = Vector2( -976.36, 534.252 )
+rotation = 2.35445
+scale = Vector2( 2, 2 )
+texture = ExtResource( 13 )
+
+[node name="Sprite2" type="Sprite" parent="Node2D/BlondeGuest"]
+position = Vector2( -1.35999, 61.252 )
+rotation = -3.33707
+scale = Vector2( 3, 3 )
+texture = ExtResource( 14 )
+
+[node name="DarkGuest" type="StaticBody2D" parent="Node2D"]
 position = Vector2( 526.408, 1087.64 )
 script = ExtResource( 11 )
 
-[node name="Sprite" type="Sprite" parent="Node2D/StaticBody2D3"]
+[node name="Sprite" type="Sprite" parent="Node2D/DarkGuest"]
 scale = Vector2( 2.5, 2.5 )
 texture = ExtResource( 10 )
 hframes = 2
 frame = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/DarkGuest"]
 shape = SubResource( 4 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/StaticBody2D3"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/DarkGuest"]
 anims/sitting = SubResource( 5 )
+
+[node name="Cafe" type="Sprite" parent="Node2D/DarkGuest"]
+position = Vector2( 899.592, -593.64 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 12 )
+
+[node name="Facemask" type="Sprite" parent="Node2D/DarkGuest"]
+position = Vector2( 976.592, -559.64 )
+rotation = -5.75784
+scale = Vector2( 2, 2 )
+texture = ExtResource( 13 )
 
 [editable path="0Base"]
