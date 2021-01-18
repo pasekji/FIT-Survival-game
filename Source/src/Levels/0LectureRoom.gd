@@ -55,7 +55,7 @@ func q1b2():
 			Global.quest_keyboard_started = true
 			$Lector.quest_started = true
 			$Lector.dialog_index = 0
-		var next = false
+			next = false
 
 func q1b3():
 	if next == true:

@@ -172,10 +172,10 @@ position = Vector2( 526.408, 1087.64 )
 script = ExtResource( 11 )
 
 [node name="Sprite" type="Sprite" parent="Node2D/DarkGuest"]
+position = Vector2( -0.40802, 0.359985 )
 scale = Vector2( 2.5, 2.5 )
 texture = ExtResource( 10 )
 hframes = 2
-frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/DarkGuest"]
 shape = SubResource( 4 )

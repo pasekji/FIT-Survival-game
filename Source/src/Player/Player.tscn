@@ -198,6 +198,8 @@ position = Vector2( -3.65109, -42.5027 )
 shape = SubResource( 10 )
 
 [node name="UserInterface" parent="." instance=ExtResource( 5 )]
+scale = Vector2( 2, 2 )
+transform = Transform2D( 2, 0, 0, 2, 0, 0 )
 
 [node name="TalkArea" type="Area2D" parent="."]
 visible = false

@@ -12,7 +12,7 @@
 [ext_resource path="res://src/Levels/StaticBody2D.gd" type="Script" id=10]
 [ext_resource path="res://src/Levels/0LectureRoom.gd" type="Script" id=11]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "sitting"
 loop = true
 tracks/0/type = "value"
@@ -28,7 +28,7 @@ tracks/0/keys = {
 "values": [ 0, 1 ]
 }
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 [node name="0LectureRoom" type="Node2D"]
 script = ExtResource( 11 )
@@ -162,10 +162,10 @@ position = Vector2( 2665.01, 3429.04 )
 script = ExtResource( 10 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody2D"]
-anims/sitting = SubResource( 2 )
+anims/sitting = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D"]
 position = Vector2( -5.95264, -109.927 )
