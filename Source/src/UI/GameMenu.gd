@@ -13,6 +13,7 @@ func _on_Button_pressed():
 
 # EXIT
 func _on_Button2_pressed():
+	Global.restart = true
 	get_tree().change_scene("res://src/UI/StartMenu.tscn")
 	
 

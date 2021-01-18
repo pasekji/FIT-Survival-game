@@ -7,12 +7,6 @@ const NUM_INVENTORY_SLOTS = 20
 var inventory = {
 }
 
-func _ready():
-	if Global.ISIC == true:
-		for key in inventory.keys():
-			if key.name == 'isic':
-				print("mam isic")
-
 func add_item(item_name, item_quantity):
 	if item_name == 'coffee-cup' and Global.cups10 == false:
 		check_quest10()

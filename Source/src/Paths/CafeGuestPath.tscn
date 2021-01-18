@@ -63,7 +63,7 @@ tracks/0/keys = {
 "values": [ 11, 9, 11, 9, 11, 9, 11, 9, 11, 9 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=6]
 resource_name = "walkright"
 length = 2.0
 loop = true
@@ -80,7 +80,7 @@ tracks/0/keys = {
 "values": [ 3, 5, 3, 5, 3, 5, 3, 5, 3, 5 ]
 }
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 21.6666, 33.6667 )
 
 [node name="Path2D" type="Path2D"]
@@ -119,7 +119,7 @@ shape = SubResource( 2 )
 anims/idleleft = SubResource( 3 )
 anims/idleright = SubResource( 4 )
 anims/walkleft = SubResource( 5 )
-anims/walkright = SubResource( 7 )
+anims/walkright = SubResource( 6 )
 
 [node name="Dialogue" parent="PathFollow2D/Cafeguest" instance=ExtResource( 3 )]
 margin_left = -316.333
@@ -133,7 +133,7 @@ collision_layer = 0
 collision_mask = 73
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Cafeguest/Area2D"]
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="Timer" type="Timer" parent="PathFollow2D/Cafeguest"]
 [connection signal="body_entered" from="PathFollow2D/Cafeguest/Area2D" to="PathFollow2D/Cafeguest" method="_on_Area2D_body_entered"]

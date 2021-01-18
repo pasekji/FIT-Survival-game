@@ -1,6 +1,5 @@
 extends CanvasLayer
-
-
+var restart = false
 func _ready():
 	#startGame()
 	pass
@@ -20,7 +19,10 @@ func _on_Button3_pressed():
 
 
 func startGame():
-	get_tree().change_scene("res://src/Levels/0Gate.tscn")
-
+	if Global.restart:
+		Global.restartGame()
+	else:
+		get_tree().change_scene("res://src/Levels/0Gate.tscn")
+	
 func showCredits():
 	$Control/Credits/Control.show()

@@ -27,6 +27,6 @@ func _on_TalkArea_body_exited(body):
 	if body.name != 'gatekeeper':
 		
 		if bodies.size() > 0 and bodies.size() != 1:
-			print(bodies.erase(body))
+			bodies.erase(body)
 		else:
 			$InstructionsTalk.hide()
