@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://src/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://graphics/Player/player-spritesheet.png" type="Texture" id=2]
 [ext_resource path="res://graphics/Player/RpgCharacterShadow.png" type="Texture" id=3]
 [ext_resource path="res://src/Player/PickUpArea.gd" type="Script" id=4]
 [ext_resource path="res://src/UI/UserInterface.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/UI/Menu.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 44.7083, 101.072 )
@@ -210,6 +211,8 @@ collision_mask = 64
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TalkArea"]
 position = Vector2( -4, -43 )
 shape = SubResource( 11 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 6 )]
 [connection signal="body_entered" from="PickUpArea" to="PickUpArea" method="_on_PickUpArea_body_entered"]
 [connection signal="body_exited" from="PickUpArea" to="PickUpArea" method="_on_PickUpArea_body_exited"]
 [connection signal="body_entered" from="TalkArea" to="Camera2D/UserInterface" method="_on_TalkArea_body_entered"]

@@ -27,15 +27,13 @@ func _process(_delta):
 			_load_dialog(4)
 			player_buys = false
 			player_response = false
-			focus = 'Cafeguest'
-			if ! spawned:
-				guest()
 		else:
 			if focus == 'Player':
 				$Dialogue/Popup.hide()
 
 
 func guest():
+	focus = 'Cafeguest'
 	var guest = path.instance()
 	get_parent().call_deferred("add_child", guest)
 	spawned = true
@@ -47,6 +45,7 @@ func _on_Area2D_body_entered(body):
 	if body.name == 'Player' and body.name == focus:
 		_load_dialog(3)
 		player_buys = true
+		$SpawnTimerGuest.start(rand_range(0, 3))
 	if body.name == 'Cafeguest' and body.name == focus:
 		_load_dialog(index)
 		$Timer.start(4)
@@ -59,3 +58,9 @@ func _on_Timer_timeout():
 			focus = 'Player'
 		index = index + 1
 		_load_dialog(index)
+
+
+func _on_SpawnTimerGuest_timeout():
+	if ! spawned:
+			guest()
+			
