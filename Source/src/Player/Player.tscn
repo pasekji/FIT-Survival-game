@@ -146,6 +146,9 @@ radius = 409.011
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 95
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -188,6 +191,8 @@ current = true
 zoom = Vector2( 3, 3 )
 process_mode = 0
 
+[node name="UserInterface" parent="Camera2D" instance=ExtResource( 5 )]
+
 [node name="PickUpArea" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 32
@@ -196,10 +201,6 @@ script = ExtResource( 4 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpArea"]
 position = Vector2( -3.65109, -42.5027 )
 shape = SubResource( 10 )
-
-[node name="UserInterface" parent="." instance=ExtResource( 5 )]
-scale = Vector2( 2, 2 )
-transform = Transform2D( 2, 0, 0, 2, 0, 0 )
 
 [node name="TalkArea" type="Area2D" parent="."]
 visible = false
@@ -211,5 +212,5 @@ position = Vector2( -4, -43 )
 shape = SubResource( 11 )
 [connection signal="body_entered" from="PickUpArea" to="PickUpArea" method="_on_PickUpArea_body_entered"]
 [connection signal="body_exited" from="PickUpArea" to="PickUpArea" method="_on_PickUpArea_body_exited"]
-[connection signal="body_entered" from="TalkArea" to="UserInterface" method="_on_TalkArea_body_entered"]
-[connection signal="body_exited" from="TalkArea" to="UserInterface" method="_on_TalkArea_body_exited"]
+[connection signal="body_entered" from="TalkArea" to="Camera2D/UserInterface" method="_on_TalkArea_body_entered"]
+[connection signal="body_exited" from="TalkArea" to="Camera2D/UserInterface" method="_on_TalkArea_body_exited"]

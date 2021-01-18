@@ -5,7 +5,7 @@ var notes_length = 0
 var notes_index = 0
 var entered = false
 var dialog_index = 0
-var quest_started = false
+var quest_started = Global.quest_keyboard_started
 var has_keyboard = Global.keyboard
 
 func _ready():
@@ -15,6 +15,7 @@ func _ready():
 func _process(_delta):
 	if entered and Input.is_action_just_pressed("ui_accept"):
 		entered = false
+		print(dialog_index)
 		if dialog_index == 0:
 			if quest_started:
 				print("started")
@@ -53,6 +54,12 @@ func _on_Area2D_body_entered(_body):
 
 func _on_Area2D_body_exited(_body):
 	entered = false
+	if ! quest_started:
+		get_parent().hide_all()
+		get_parent().dialog_index = 0
+		get_parent().next = true
+		dialog_index = 0
+		$TimerLecture.start()
 
 
 func winGame():

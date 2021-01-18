@@ -32,9 +32,11 @@ func q1b1():
 			$Lector/TimerLecture.start()
 			$Lector.notes_index = randi() % 30
 		if dialog_index == 2:
-			dialog_index = 21
+			dialog_index = 0
 			$Lector.dialogue("Me too. Press alt+f4!")
-		var next = false
+			$Lector/TimerLecture.start(2)
+			$Lector.notes_index = randi() % 30
+		next = false
 
 
 # stop lesson and students leave
@@ -55,7 +57,7 @@ func q1b2():
 			Global.quest_keyboard_started = true
 			$Lector.quest_started = true
 			$Lector.dialog_index = 0
-			next = false
+		next = false
 
 func q1b3():
 	if next == true:
@@ -66,7 +68,7 @@ func q1b3():
 			$Lector.dialogue("I feel the same sometimes. What do you need?")
 			dialog_index = 2
 			show_choice()
-			var next = false
+			next = false
 			return
 		if dialog_index == 2:
 			dialog_index = 23
@@ -75,7 +77,7 @@ func q1b3():
 			spawnBeer()
 			hide_all()
 			dialog_index = 0
-			var next = false
+		next = false
 
 func spawnBeer():
 	var beer = item_drop.instance()
