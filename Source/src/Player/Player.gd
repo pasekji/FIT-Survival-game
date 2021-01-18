@@ -3,15 +3,21 @@ extends KinematicBody2D
 const SPEED = 3000
 var movedir = Vector2(0,0)
 var spritedir = "down"
+var dist = 0
+var prevpos = self.position
 
 func _ready():
 	self.global_position = Global.player_initial_map_position
-
+	prevpos = self.position
 
 
 func _physics_process(_delta):
+	
 		controls_loop()
 		movement_loop()
+		if prevpos != self.position:
+			Global.dist += Vector2(self.position - prevpos).length()
+			prevpos = self.position
 		spritedir_loop()
 		pickup()
 		
@@ -34,6 +40,8 @@ func controls_loop():
 func movement_loop():
 	var motion = movedir.normalized() * SPEED
 	move_and_slide(motion, Vector2.ZERO)
+	
+
 
 
 func spritedir_loop():

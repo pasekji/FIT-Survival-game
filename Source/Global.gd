@@ -9,6 +9,7 @@ var keyboard = false
 var quest_keyboard_started = false
 var backup_keys = false
 var start_time = null
+var dist = 0
 
 func _ready():
 	start_time = OS.get_time()

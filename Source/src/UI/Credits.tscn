@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/impact_imported.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/UI/Credits.gd" type="Script" id=2]
+
+[node name="Credits" type="CanvasLayer"]
+layer = 2
+script = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -150.0
+margin_right = 200.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 400, 300 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center] 
+Jiri Pasek
+AND
+ Matej Suty"
+text = " 
+Jiri Pasek
+AND
+ Matej Suty"
+__meta__ = {
+"_edit_use_anchors_": false
+}

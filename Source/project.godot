@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="FITtmp"
-run/main_scene="res://src/Levels/0Gate.tscn"
+run/main_scene="res://src/UI/StartMenu.tscn"
 
 [autoload]
 

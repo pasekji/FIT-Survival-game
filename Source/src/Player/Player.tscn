@@ -5,7 +5,7 @@
 [ext_resource path="res://graphics/Player/RpgCharacterShadow.png" type="Texture" id=3]
 [ext_resource path="res://src/Player/PickUpArea.gd" type="Script" id=4]
 [ext_resource path="res://src/UI/UserInterface.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/UI/Menu.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/UI/GameMenu.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 44.7083, 101.072 )
