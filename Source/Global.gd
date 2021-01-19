@@ -25,9 +25,6 @@ func restartGame():
 	backup_keys = false
 	start_time = null
 	dist = 0
-	#var nodes = get_parent().get_children()
-	#for i in nodes.size():
-	#	print(nodes[i].queue_free())
 	get_tree().change_scene("res://src/Levels/0Gate.tscn")
 	restart = false
 	PlayerInventory.inventory = {}
