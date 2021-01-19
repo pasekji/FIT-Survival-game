@@ -84,6 +84,9 @@ func _on_Timer_timeout():
 
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept") and speaking:
+		if Global.backup_keys:
+			dialogue(8)
+			return
 		dialogue(player_dialogue_index)
 		player_dialogue_index = player_dialogue_index + 1
 		if player_dialogue_index > 3:
@@ -105,7 +108,7 @@ func questFinish():
 
 func start_dialogue(_body):
 	speaking = true
-	if Global.cups10 == true:
+	if Global.cups10 == true and Global.backup_keys == false:
 		questFinish()
 
 func end_dialogue(_body):

@@ -9,7 +9,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7, 4.66667 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=2]
 resource_name = "idledown"
 length = 0.05
 loop = true
@@ -26,7 +26,7 @@ tracks/0/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
 resource_name = "idleleft"
 length = 0.05
 loop = true
@@ -43,7 +43,7 @@ tracks/0/keys = {
 "values": [ 10 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=4]
 resource_name = "idleright"
 length = 0.05
 loop = true
@@ -60,7 +60,7 @@ tracks/0/keys = {
 "values": [ 4 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=5]
 resource_name = "idleup"
 length = 0.05
 loop = true
@@ -77,7 +77,7 @@ tracks/0/keys = {
 "values": [ 7 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=6]
 resource_name = "walkdown"
 length = 2.0
 loop = true
@@ -94,7 +94,7 @@ tracks/0/keys = {
 "values": [ 0, 2, 0, 2, 0, 2, 0, 2, 0, 2 ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=7]
 resource_name = "walkleft"
 length = 2.0
 loop = true
@@ -111,7 +111,7 @@ tracks/0/keys = {
 "values": [ 9, 11, 9, 11, 9, 11, 9, 11, 9, 11 ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=8]
 resource_name = "walkright"
 length = 2.0
 loop = true
@@ -128,8 +128,7 @@ tracks/0/keys = {
 "values": [ 3, 5, 3, 5, 3, 5, 3, 5, 3, 5 ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "walkup"
+[sub_resource type="Animation" id=9]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -145,10 +144,10 @@ tracks/0/keys = {
 "values": [ 6, 8, 6, 8, 6, 8, 6, 8, 6, 8 ]
 }
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 92.6667, 90 )
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=11]
 radius = 133.335
 
 [node name="Cleaner" type="KinematicBody2D"]
@@ -162,14 +161,14 @@ position = Vector2( 0, -10 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/idledown = SubResource( 4 )
-anims/idleleft = SubResource( 5 )
-anims/idleright = SubResource( 6 )
-anims/idleup = SubResource( 7 )
-anims/walkdown = SubResource( 9 )
-anims/walkleft = SubResource( 10 )
-anims/walkright = SubResource( 11 )
-anims/walkup = SubResource( 8 )
+anims/idledown = SubResource( 2 )
+anims/idleleft = SubResource( 3 )
+anims/idleright = SubResource( 4 )
+anims/idleup = SubResource( 5 )
+anims/walkdown = SubResource( 6 )
+anims/walkleft = SubResource( 7 )
+anims/walkright = SubResource( 8 )
+anims/walkup = SubResource( 9 )
 
 [node name="Shadow" type="Sprite" parent="."]
 scale = Vector2( 2.60443, 1.34451 )
@@ -191,7 +190,7 @@ script = ExtResource( 4 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpArea"]
 visible = false
 position = Vector2( 0, -0.333333 )
-shape = SubResource( 2 )
+shape = SubResource( 10 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
@@ -208,7 +207,7 @@ dialog = [ "I love my job.", "Clean and shiny! I love it.", "This was once a cap
 collision_layer = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 3 )
+shape = SubResource( 11 )
 
 [node name="QuestAwardTimer" type="Timer" parent="."]
 wait_time = 2.0

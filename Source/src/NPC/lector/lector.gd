@@ -18,7 +18,6 @@ func _process(_delta):
 		print(dialog_index)
 		if dialog_index == 0:
 			if quest_started:
-				print("started")
 				if has_keyboard:
 					notes_index = 36
 					winGame()
@@ -63,4 +62,9 @@ func _on_Area2D_body_exited(_body):
 
 
 func winGame():
-	pass
+	$Behold.start(2)
+
+
+func _on_Behold_timeout():
+	get_parent().get_node("EndGame").show()
+	$Behold.stop()

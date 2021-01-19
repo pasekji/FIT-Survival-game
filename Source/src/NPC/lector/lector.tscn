@@ -120,6 +120,9 @@ fit_content_height = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Behold" type="Timer" parent="."]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
 [connection signal="timeout" from="TimerLecture" to="." method="_on_TimerLecture_timeout"]
+[connection signal="timeout" from="Behold" to="." method="_on_Behold_timeout"]
