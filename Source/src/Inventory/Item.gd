@@ -1,5 +1,5 @@
 extends Node2D
-
+var item_label_name
 var item_name
 var item_quantity
 var item_description = ''
@@ -17,6 +17,7 @@ func set_item(nm, qt):
 	
 	var stack_size = int(JsonData.item_data[item_name]["StackSize"])
 	item_description = JsonData.item_data[item_name]["Description"]
+	item_label_name = JsonData.item_data[item_name]["Label-Name"]
 	if stack_size == 1:
 		$Label.visible = false
 	else:
