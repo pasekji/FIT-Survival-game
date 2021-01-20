@@ -1,10 +1,11 @@
 extends CanvasLayer
 var restart = false
+
+
 func _ready():
-	#startGame()
-	pass
-	
-	
+	BGMusic.change("main")
+
+
 # START GAME
 func _on_Button_pressed():
 	startGame()

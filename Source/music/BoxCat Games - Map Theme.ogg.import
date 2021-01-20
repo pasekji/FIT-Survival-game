@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BoxCat Games - Map Theme.ogg-775ede3b6cf6a384d11977df6a9653d3.oggstr"
+
+[deps]
+
+source_file="res://music/BoxCat Games - Map Theme.ogg"
+dest_files=[ "res://.import/BoxCat Games - Map Theme.ogg-775ede3b6cf6a384d11977df6a9653d3.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

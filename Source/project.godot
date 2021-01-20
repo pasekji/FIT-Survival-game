@@ -28,6 +28,7 @@ run/main_scene="res://src/UI/StartMenu.tscn"
 Global="*res://Global.gd"
 JsonData="*res://src/Inventory/JSONData.gd"
 PlayerInventory="*res://src/Player/PlayerInventory.gd"
+BGMusic="*res://src/UI/BackgroundMusic.gd"
 
 [input]
 
@@ -73,6 +74,11 @@ pickup={
 escape={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"unicode":0,"echo":false,"script":null)
+ ]
+}
+pc_toggle={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":81,"unicode":0,"echo":false,"script":null)
  ]
 }
 

@@ -1,7 +1,9 @@
 extends CanvasLayer
 var restart_continue = false
-	
+
+
 func show():
+	BGMusic.change("end")
 	var curr_time = OS.get_system_time_secs()
 	var duration_sec = curr_time - Global.start_time
 	var h = duration_sec / 3600

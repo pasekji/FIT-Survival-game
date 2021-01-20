@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BoxCat Games - Inspiration.ogg-24461833573b002aef19c7191aeb8377.oggstr"
+
+[deps]
+
+source_file="res://music/BoxCat Games - Inspiration.ogg"
+dest_files=[ "res://.import/BoxCat Games - Inspiration.ogg-24461833573b002aef19c7191aeb8377.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

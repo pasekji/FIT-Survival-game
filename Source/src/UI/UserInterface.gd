@@ -21,6 +21,7 @@ func _input(event):
 		$Inventory.visible = !$Inventory.visible
 		$Inventory.initialize_inventory()
 		$Hint.hide()
+		
 
 
 func _on_TalkArea_body_entered(body):

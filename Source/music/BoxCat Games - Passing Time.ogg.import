@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BoxCat Games - Passing Time.ogg-66f017a7e42d35a363b45c269730c4df.oggstr"
+
+[deps]
+
+source_file="res://music/BoxCat Games - Passing Time.ogg"
+dest_files=[ "res://.import/BoxCat Games - Passing Time.ogg-66f017a7e42d35a363b45c269730c4df.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

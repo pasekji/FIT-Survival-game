@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/NPC/cafeguest/cafeguest.gd" type="Script" id=1]
 [ext_resource path="res://graphics/Player/npc4.png" type="Texture" id=2]
 [ext_resource path="res://src/Dialogue Box/Dialogue.tscn" type="PackedScene" id=3]
+[ext_resource path="res://music/Gibberish - Sound effect.ogg" type="AudioStream" id=4]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -136,5 +137,9 @@ collision_mask = 73
 shape = SubResource( 7 )
 
 [node name="Timer" type="Timer" parent="PathFollow2D/Cafeguest"]
+
+[node name="Gibber" type="AudioStreamPlayer2D" parent="PathFollow2D/Cafeguest"]
+stream = ExtResource( 4 )
+volume_db = -10.0
 [connection signal="body_entered" from="PathFollow2D/Cafeguest/Area2D" to="PathFollow2D/Cafeguest" method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="PathFollow2D/Cafeguest/Timer" to="PathFollow2D/Cafeguest" method="_on_Timer_timeout"]

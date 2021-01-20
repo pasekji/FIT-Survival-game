@@ -43,6 +43,9 @@ func _on_Area2D_body_entered(body):
 	if body.name == 'Player' and $Timer.is_stopped():
 		index = 0
 		_load_dialog()
+		print('again')
+		$Gibber.play()
+		
 	if body.name == 'CafeteriaLady':
 		index = 1
 		$Timer.start(2)

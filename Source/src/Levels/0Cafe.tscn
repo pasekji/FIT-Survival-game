@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://src/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/floor.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://graphics/icons/coffee.png" type="Texture" id=12]
 [ext_resource path="res://graphics/icons/facemask.png" type="Texture" id=13]
 [ext_resource path="res://graphics/icons/item-pamphlet.png" type="Texture" id=14]
+[ext_resource path="res://src/Levels/0Cafe.gd" type="Script" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40.8965, 171.175 )
@@ -56,6 +57,7 @@ tracks/0/keys = {
 }
 
 [node name="0Cafe" type="Node2D"]
+script = ExtResource( 15 )
 __meta__ = {
 "_edit_lock_": true
 }

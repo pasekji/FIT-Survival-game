@@ -67,3 +67,11 @@ func pickup():
 		var pickup_item = $PickUpArea.items_in_range.values()[0]
 		pickup_item.pick_up_item(self, true)
 		$PickUpArea.items_in_range.erase(pickup_item)
+
+
+func PC_entered(body):
+	$Camera2D/UserInterface/PCMusic.show()
+
+
+func _on_Area2D_body_exited(body):
+	$Camera2D/UserInterface/PCMusic.hide()
