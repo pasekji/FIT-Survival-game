@@ -4,6 +4,7 @@ var restart = false
 
 func _ready():
 	BGMusic.change("main")
+	OS.window_fullscreen = true
 
 
 # START GAME
