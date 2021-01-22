@@ -43,6 +43,11 @@ func change(name):
 		lo_th = -30.0
 		hi_th = -25.0
 		new_track = load("res://music/BoxCat Games - Passing Time.ogg")
+	if name == 'title':
+		volume_db = -30.0
+		lo_th = -30.0
+		hi_th = -10.0
+		new_track = load("res://music/BoxCat-Games-Nameless_-the-Hackers-Title-Screen.ogg")
 	timer.start(0.1)
 
 func quiet():

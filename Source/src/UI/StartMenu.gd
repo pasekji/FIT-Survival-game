@@ -26,4 +26,5 @@ func startGame():
 		get_tree().change_scene("res://src/Levels/0Gate.tscn")
 	
 func showCredits():
+	BGMusic.change("title")
 	$Control/Credits/Control.show()
