@@ -26,5 +26,8 @@ func _physics_process(delta):
 		velocity = move_and_slide(velocity, Vector2.UP)
 
 func pick_up_item(body, condition):
+	if body.name == 'Player':
+		if $AudioStreamPlayer2D:
+			$AudioStreamPlayer2D.play()
 	player = body
 	being_picked_up = condition

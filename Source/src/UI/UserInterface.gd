@@ -1,9 +1,14 @@
 extends CanvasLayer
+var show_hint = true
 
 var bodies = {}
 
 func _ready():
-	pass
+	if get_tree().current_scene.name != '0Gate':
+		$Hint.hide()
+	else:
+		if show_hint:
+			$Hint.show()
 
 
 func _process(_delta):
@@ -15,6 +20,8 @@ func _input(event):
 	if event.is_action_pressed("inventory"):
 		$Inventory.visible = !$Inventory.visible
 		$Inventory.initialize_inventory()
+		$Hint.hide()
+		
 
 
 func _on_TalkArea_body_entered(body):

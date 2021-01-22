@@ -5,6 +5,9 @@ const item_drop = preload("res://src/Inventory/ItemDrop.tscn")
 var limit = 15
 var key = 0
 
+func _ready():
+	BGMusic.change("base")
+
 func _on_CoffeeCupSpawnTimer_timeout():
 	if Global.coffee_cups.size() < limit:
 		var x = rand_range(0, 4000)

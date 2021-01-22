@@ -26,6 +26,7 @@ func _on_Area2D_body_entered(body):
 	if body.name == 'Player':
 		index = 0
 		_load_dialog()
+		$Gibber.play()
 
 
 func _on_Area2D_body_exited(body):

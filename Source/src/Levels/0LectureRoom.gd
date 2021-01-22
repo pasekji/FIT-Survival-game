@@ -3,8 +3,10 @@ var dialog_index = 0
 const item_drop = preload("res://src/Inventory/ItemDrop.tscn")
 var next = true
 var quest_started = Global.quest_keyboard_started
+
 func _ready():
 	$Player.global_position = Vector2(200, 3800)
+	BGMusic.quiet()
 	hide_all()
 
 

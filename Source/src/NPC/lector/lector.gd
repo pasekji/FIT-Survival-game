@@ -11,14 +11,15 @@ var has_keyboard = Global.keyboard
 func _ready():
 	notes_length = $fileread.text.size()
 	$Dialogue/Popup/Panel.set_global_position(Vector2(3800, 1800))
+	$Talk.play()
 
 func _process(_delta):
 	if entered and Input.is_action_just_pressed("ui_accept"):
+		$Talk.pitch_scale = 1.2
 		entered = false
 		print(dialog_index)
 		if dialog_index == 0:
 			if quest_started:
-				print("started")
 				if has_keyboard:
 					notes_index = 36
 					winGame()
@@ -53,6 +54,7 @@ func _on_Area2D_body_entered(_body):
 
 
 func _on_Area2D_body_exited(_body):
+	$Talk.pitch_scale = 1.0
 	entered = false
 	if ! quest_started:
 		get_parent().hide_all()
@@ -63,4 +65,10 @@ func _on_Area2D_body_exited(_body):
 
 
 func winGame():
-	pass
+	$Talk.stop()
+	$Behold.start(2)
+
+
+func _on_Behold_timeout():
+	get_parent().get_node("EndGame").show()
+	$Behold.stop()

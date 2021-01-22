@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://assets/fonts/impact_imported.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/UI/EndGame.gd" type="Script" id=2]
 
 [node name="EndGame" type="CanvasLayer"]
+script = ExtResource( 2 )
 
 [node name="Control" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -20,10 +23,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -112.0
-margin_top = -120.5
-margin_right = 112.0
-margin_bottom = 120.5
+margin_left = -286.0
+margin_top = -163.0
+margin_right = 286.0
+margin_bottom = 163.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -31,7 +34,7 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Control/Panel/VBoxContainer"]
-margin_right = 224.0
+margin_right = 572.0
 margin_bottom = 62.0
 custom_fonts/font = ExtResource( 1 )
 text = "YOU WON!"
@@ -40,7 +43,7 @@ autowrap = true
 
 [node name="Label2" type="Label" parent="Control/Panel/VBoxContainer"]
 margin_top = 66.0
-margin_right = 224.0
+margin_right = 572.0
 margin_bottom = 128.0
 custom_fonts/font = ExtResource( 1 )
 text = "YOU WON!"
@@ -49,7 +52,7 @@ autowrap = true
 
 [node name="Label3" type="Label" parent="Control/Panel/VBoxContainer"]
 margin_top = 132.0
-margin_right = 224.0
+margin_right = 572.0
 margin_bottom = 194.0
 custom_fonts/font = ExtResource( 1 )
 text = "YOU WON!"
@@ -58,7 +61,21 @@ autowrap = true
 
 [node name="Label4" type="Label" parent="Control/Panel/VBoxContainer"]
 margin_top = 198.0
-margin_right = 224.0
-margin_bottom = 212.0
+margin_right = 572.0
+margin_bottom = 260.0
+custom_fonts/font = ExtResource( 1 )
+text = "YOU WON!"
 align = 1
 autowrap = true
+
+[node name="Label5" type="Label" parent="Control/Panel/VBoxContainer"]
+margin_top = 264.0
+margin_right = 572.0
+margin_bottom = 326.0
+custom_fonts/font = ExtResource( 1 )
+text = "YOU WON!"
+align = 1
+autowrap = true
+
+[node name="Behold" type="Timer" parent="."]
+[connection signal="timeout" from="Behold" to="." method="_on_Behold_timeout"]

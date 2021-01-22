@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/fonts/impact_imported.tres" type="DynamicFont" id=1]
 [ext_resource path="res://graphics/Player/RpgCharacterShadow.png" type="Texture" id=2]
 [ext_resource path="res://graphics/Player/npc7 - progtestovy muz.png" type="Texture" id=3]
 [ext_resource path="res://src/NPC/lector/lector.gd" type="Script" id=4]
 [ext_resource path="res://src/NPC/lector/fileread.gd" type="Script" id=5]
+[ext_resource path="res://music/Nonsensical Gibberish.ogg" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 42.6667, 48 )
@@ -120,6 +121,14 @@ fit_content_height = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Behold" type="Timer" parent="."]
+
+[node name="Talk" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+max_distance = 4000.0
+attenuation = 0.637281
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
 [connection signal="timeout" from="TimerLecture" to="." method="_on_TimerLecture_timeout"]
+[connection signal="timeout" from="Behold" to="." method="_on_Behold_timeout"]

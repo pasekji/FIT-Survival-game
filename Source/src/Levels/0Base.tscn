@@ -48,10 +48,10 @@ __meta__ = {
 }
 
 [node name="Floorimage3" type="TextureRect" parent="Floorimage"]
-anchor_left = 0.992376
-anchor_top = 1.00335
-anchor_right = 0.992376
-anchor_bottom = 1.00335
+anchor_left = 0.992272
+anchor_top = 1.00336
+anchor_right = 0.992272
+anchor_bottom = 1.00336
 margin_left = 4000.91
 margin_top = 4000.58
 margin_right = 8000.91
@@ -214,7 +214,7 @@ shape = SubResource( 2 )
 [node name="Cleaner" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2449, 2437 )
 scene_position = Vector2( 2000, 2500 )
-dialog = [ "I love my job!", "This was a cappucino.", "Do you want to help me?", "Collect 10 cups and I will give you something.", "Thank you so much!", "Did you drink them all?", "Here are my backup keys!", "Here are my backup keys!" ]
+dialog = [ "I love my job!", "This was a cappucino.", "Do you want to help me?", "Collect 10 cups and I will give you something.", "Thank you so much!", "Did you drink them all?", "Here are my backup keys!", "Here are my backup keys!", "You helped me, thank you!" ]
 
 [node name="CoffeeCupSpawnTimer" type="Timer" parent="."]
 wait_time = 0.002

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Nonsensical Gibberish.ogg-6126587151457b4f72589f56391f21b2.oggstr"
+
+[deps]
+
+source_file="res://music/Nonsensical Gibberish.ogg"
+dest_files=[ "res://.import/Nonsensical Gibberish.ogg-6126587151457b4f72589f56391f21b2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
