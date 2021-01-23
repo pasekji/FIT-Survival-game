@@ -14,7 +14,8 @@ _data = {
 extents = Vector2( 15, 33 )
 
 [sub_resource type="Animation" id=3]
-resource_name = "idleleft"
+resource_name = "idleright"
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -80,7 +81,7 @@ visible = false
 shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PathFollow2D/Cafeguest"]
-anims/idleleft = SubResource( 3 )
+anims/idleright = SubResource( 3 )
 anims/walkright = SubResource( 4 )
 
 [node name="Dialogue" parent="PathFollow2D/Cafeguest" instance=ExtResource( 3 )]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Objects/TableBlue.tscn" type="PackedScene" id=2]
@@ -7,9 +7,14 @@
 [ext_resource path="res://graphics/fit-env-assets/trashbin1.png" type="Texture" id=5]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=6]
 [ext_resource path="res://src/NPC/gatekeeper/gatekeeper.tscn" type="PackedScene" id=7]
+[ext_resource path="res://graphics/fit-env-assets/rollup.png" type="Texture" id=8]
+[ext_resource path="res://graphics/fit-env-assets/rollup1.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40.9214, 177.507 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 115.896, 149.864 )
 
 [node name="0Gate" type="Node2D"]
 __meta__ = {
@@ -60,17 +65,40 @@ position = Vector2( 640, 832 )
 [node name="Table21" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( 640, 1018 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+[node name="trashbins" type="StaticBody2D" parent="Node2D"]
 position = Vector2( 1801.9, 237.844 )
 
-[node name="Sprite" type="Sprite" parent="Node2D/StaticBody2D"]
+[node name="Sprite" type="Sprite" parent="Node2D/trashbins"]
 position = Vector2( 21.2571, -6.7853 )
 scale = Vector2( 16.0002, 14.6915 )
 texture = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/trashbins"]
 position = Vector2( 22.7698, -8.05243 )
 shape = SubResource( 1 )
+
+[node name="rollup1" type="StaticBody2D" parent="Node2D"]
+position = Vector2( 1569.77, 240.751 )
+
+[node name="Sprite" type="Sprite" parent="Node2D/rollup1"]
+position = Vector2( 6.36142, -177.516 )
+scale = Vector2( 10.343, 10.343 )
+texture = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/rollup1"]
+polygon = PoolVector2Array( -85.7727, -84.0015, -76.2727, -35.0015, -64.0227, -22.5015, 33.7273, 18.9985, 99.4773, -12.7515, 99.9773, -140.251, 99.5386, -290.784, -82.3192, -359.258, -84.5642, -301.731, -85.7727, -218.751 )
+
+[node name="rollup2" type="StaticBody2D" parent="Node2D"]
+position = Vector2( 874.287, 109.301 )
+
+[node name="Sprite" type="Sprite" parent="Node2D/rollup2"]
+position = Vector2( 58.7127, -136.855 )
+scale = Vector2( 9.55342, 9.55342 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/rollup2"]
+position = Vector2( 59, -132.5 )
+shape = SubResource( 2 )
 
 [node name="GateKeeper" parent="." instance=ExtResource( 7 )]
 position = Vector2( 300, 562 )

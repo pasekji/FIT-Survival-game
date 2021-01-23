@@ -42,8 +42,6 @@ func movement_loop():
 	move_and_slide(motion, Vector2.ZERO)
 	
 
-
-
 func spritedir_loop():
 	match movedir:
 		Vector2(-1,0):
