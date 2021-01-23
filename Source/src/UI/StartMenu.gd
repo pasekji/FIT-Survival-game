@@ -4,6 +4,10 @@ var restart = false
 
 func _ready():
 	BGMusic.change("main")
+<<<<<<< HEAD
+=======
+	OS.window_fullscreen = true
+>>>>>>> working
 
 
 # START GAME
@@ -26,4 +30,5 @@ func startGame():
 		get_tree().change_scene("res://src/Levels/0Gate.tscn")
 	
 func showCredits():
+	BGMusic.change("title")
 	$Control/Credits/Control.show()

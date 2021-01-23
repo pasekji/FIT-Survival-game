@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const SPEED = 3000
+const SPEED = 1000
 var movedir = Vector2(0,0)
 var spritedir = "down"
 var dist = 0
@@ -41,8 +41,6 @@ func movement_loop():
 	var motion = movedir.normalized() * SPEED
 	move_and_slide(motion, Vector2.ZERO)
 	
-
-
 
 func spritedir_loop():
 	match movedir:

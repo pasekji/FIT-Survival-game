@@ -18,7 +18,6 @@ func _physics_process(delta):
 	
 
 func _load_dialog():
-	do_idle = 1
 	if index < dialog.size():
 		$Dialogue/Popup.show()
 		$Dialogue/Popup/Panel/RichTextLabel.text = dialog[index]
@@ -47,6 +46,7 @@ func _on_Area2D_body_entered(body):
 		$Gibber.play()
 		
 	if body.name == 'CafeteriaLady':
+		do_idle = 1
 		index = 1
 		$Timer.start(2)
 

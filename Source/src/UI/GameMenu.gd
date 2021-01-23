@@ -18,5 +18,5 @@ func _on_Button2_pressed():
 	
 
 # CREDITS
-func _on_Button3_pressed():
-	$Control/Credits/Control.show()
+#func _on_Button3_pressed():
+#	$Control/Credits/Control.show()

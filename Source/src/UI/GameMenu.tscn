@@ -70,6 +70,7 @@ margin_bottom = 343.0
 text = "EXIT"
 
 [node name="Button3" type="Button" parent="Control/Panel/VBoxContainer"]
+visible = false
 margin_top = 347.0
 margin_right = 400.0
 margin_bottom = 367.0

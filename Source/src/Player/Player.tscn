@@ -189,8 +189,8 @@ __meta__ = {
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -3.23224, -42.9419 )
 current = true
-zoom = Vector2( 3, 3 )
 process_mode = 0
+smoothing_enabled = true
 
 [node name="UserInterface" parent="Camera2D" instance=ExtResource( 5 )]
 
