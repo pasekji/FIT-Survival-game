@@ -70,6 +70,10 @@ func pickup():
 func PC_entered(body):
 	$Camera2D/UserInterface/PCMusic.show()
 
-
 func _on_Area2D_body_exited(body):
 	$Camera2D/UserInterface/PCMusic.hide()
+	$Camera2D/UserInterface/Read.hide()
+	
+	
+func rollup_entered(body):
+	$Camera2D/UserInterface/Read.show()
