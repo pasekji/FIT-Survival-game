@@ -6,9 +6,10 @@ var bodies = {}
 func _ready():
 	if get_tree().current_scene.name != '0Gate':
 		$Hint.hide()
+		$Read.hide()
 	else:
-		if show_hint:
-			$Hint.show()
+		$Read.hide()
+		$Hint.hide()
 
 
 func _process(_delta):
@@ -28,7 +29,7 @@ func _on_TalkArea_body_entered(body):
 	if body.name != 'gatekeeper':
 		bodies[body] = body
 		$InstructionsTalk.show()
-
+		
 
 func _on_TalkArea_body_exited(body):
 	if body.name != 'gatekeeper':
