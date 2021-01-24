@@ -190,6 +190,7 @@ __meta__ = {
 position = Vector2( -3.23224, -42.9419 )
 scale = Vector2( 2, 2 )
 current = true
+zoom = Vector2( 2, 2 )
 process_mode = 0
 smoothing_enabled = true
 

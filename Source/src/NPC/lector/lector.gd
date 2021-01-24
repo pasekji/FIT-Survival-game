@@ -17,7 +17,6 @@ func _process(_delta):
 	if entered and Input.is_action_just_pressed("ui_accept"):
 		$Talk.pitch_scale = 1.2
 		entered = false
-		print(dialog_index)
 		if dialog_index == 0:
 			if quest_started:
 				if has_keyboard:
