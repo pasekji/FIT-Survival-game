@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/UI/UserInterface.gd" type="Script" id=1]
 [ext_resource path="res://src/Inventory/Inventory.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/montserrat_extrabold.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 28
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
 
 [node name="UserInterface" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -14,58 +23,73 @@ position = Vector2( 80, 80 )
 visible = false
 anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 0.513
 anchor_bottom = 1.0
-margin_left = -150.0
-margin_top = -20.0
-margin_right = 150.0
-rect_min_size = Vector2( 300, 20 )
-rect_clip_content = false
-meta_underlined = false
-text = "Press LEFT MOUSE to talk"
-scroll_active = false
+margin_left = -144.173
+margin_top = -31.5049
+margin_right = 142.515
+margin_bottom = 12.4951
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center] Press LMB to talk."
+text = " Press LMB to talk."
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": false,
+"_editor_description_": ""
 }
 
 [node name="Hint" type="RichTextLabel" parent="."]
 visible = false
 anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 0.513
 anchor_bottom = 1.0
-margin_left = -84.0
-margin_top = -16.0
-margin_right = 84.0
-text = "Press E to open inventory"
+margin_left = -198.913
+margin_top = -36.1204
+margin_right = 199.775
+margin_bottom = 3.87964
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center] Press E to open inventory."
+text = " Press E to open inventory."
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": false,
+"_editor_description_": ""
 }
 
 [node name="PCMusic" type="RichTextLabel" parent="."]
 visible = false
 anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 0.513
 anchor_bottom = 1.0
-margin_left = -97.0
-margin_top = -16.0
-margin_right = 97.0
-text = "Press Q to turn on/off music."
+margin_left = -222.621
+margin_top = -33.5596
+margin_right = 223.067
+margin_bottom = 4.44043
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center] Press Q to turn on/off music."
+text = " Press Q to turn on/off music."
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": false,
+"_editor_description_": ""
 }
 
 [node name="Read" type="RichTextLabel" parent="."]
 visible = false
 anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 0.513
 anchor_bottom = 1.0
-margin_left = -97.0
-margin_top = -16.0
-margin_right = 97.0
-text = "Press Q to read."
+margin_left = -121.929
+margin_top = -32.3969
+margin_right = 122.759
+margin_bottom = 11.6031
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center] Press R to read."
+text = " Press R to read."
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
