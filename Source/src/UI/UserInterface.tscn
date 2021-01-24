@@ -17,7 +17,8 @@ script = ExtResource( 1 )
 
 [node name="Inventory" parent="." instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 80, 80 )
+position = Vector2( 112, 112 )
+scale = Vector2( 1.5, 1.5 )
 
 [node name="InstructionsTalk" type="RichTextLabel" parent="."]
 visible = false
