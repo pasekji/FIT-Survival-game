@@ -5,6 +5,7 @@ var movedir = Vector2(0,0)
 var spritedir = "down"
 var dist = 0
 var prevpos = self.position
+var show_inst = false
 
 func _ready():
 	self.global_position = Global.player_initial_map_position
@@ -65,6 +66,21 @@ func pickup():
 		var pickup_item = $PickUpArea.items_in_range.values()[0]
 		pickup_item.pick_up_item(self, true)
 		$PickUpArea.items_in_range.erase(pickup_item)
+
+
+func _input(event):
+	if get_tree().current_scene.name == '0Gate':
+		if $Camera2D/UserInterface/Read.visible:
+			if event.is_action_pressed("read"):
+				if show_inst:
+					show_inst = false
+					$Control.hide()
+				else:
+					show_inst = true
+					$Control.show()
+		else:
+			show_inst = false
+			$Control.hide()
 
 
 func PC_entered(body):
