@@ -84,6 +84,7 @@ func _on_Timer_timeout():
 
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept") and speaking:
+		$AudioStreamPlayer2D.play(rand_range(0, 38))
 		if Global.backup_keys:
 			dialogue(8)
 			return
@@ -129,3 +130,7 @@ func spawnAward():
 	award.global_position = Vector2(self.global_position.x + 100, self.global_position.y - 100)
 	get_parent().call_deferred("add_child", award)
 	award.set_scale(Vector2(2, 2))
+
+
+func start_talking(body):
+	$AudioStreamPlayer2D.play(rand_range(0, 38))
