@@ -10,3 +10,5 @@ Game developed as a school project at CTU FIT. You play as a future student who 
 ### Everything MALWARE-FREE! Audited and certified by AB. :trollface:
 
 ![ab](https://media4.giphy.com/media/OanzDvY4Y5Jp3IlMGe/200.gif)
+
+## Created by Jiri Pasek & Matej Suty
