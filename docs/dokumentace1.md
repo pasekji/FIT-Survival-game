@@ -42,3 +42,6 @@ Příklady objektů:
 
 ## Dynamické objekty
 Ve hře se lze potkat celkově devět postav, kde s pěti z nich je možno interagovat. Důležité pro příběh jsou zde postavy tři, tedy s nimi hráč musí interagovat za účelem dokončení hry. Vzhled byl vytvořen pro každou důležitou postavu unikátní, některé z nich jsou také navržené dle skutečných předloh. U kompazrových postav pro oživení světa se vzhledy mohou opakovat.
+
+### Příklad postavy
+<img width="600" alt="postava" src="images/postava.gif">
