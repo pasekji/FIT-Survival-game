@@ -37,4 +37,4 @@ Příklady objektů:
 - stoly s počítači
 
 ## Dynamické objekty
-Ve hře se lze potkat celkově 9 postav, kde s 5 z nich je možno interagovat. Důležité pro příběh jsou zde postavy 3, tedy s nimi hráč musí interagovat za účelem dokončení hry. Skin byl vytvořem pro každou důležitou postavu unikátní, některé z nich jsou také navržené dle skutečných předloh. U kompazrových postav pro oživení světa se skiny mohou opakovat.
+Ve hře se lze potkat celkově devět postav, kde s pěti z nich je možno interagovat. Důležité pro příběh jsou zde postavy tři, tedy s nimi hráč musí interagovat za účelem dokončení hry. Vzhled byl vytvořen pro každou důležitou postavu unikátní, některé z nich jsou také navržené dle skutečných předloh. U kompazrových postav pro oživení světa se vzhledy mohou opakovat.
