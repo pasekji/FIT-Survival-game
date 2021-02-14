@@ -57,7 +57,7 @@ Dále mají postavy idle animace při sezení:
   
 ## Unikáty
 ### Silně podmíněno
-- Následující události jsou podmíněny činností hráče:
+Následující události jsou podmíněny činností hráče:
 - **Vstupní karta**
   - hráč musí promluvit s vrátnou, aby dostal vstupní kartu a mohl pokračovat do dalších prostor
 - **Kliče do počítačové učebny**
