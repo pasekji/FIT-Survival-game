@@ -22,11 +22,9 @@ Dále mají postavy idle animace při sezení:
 
 ## Cyklické činnosti
 - **Uklízečka**
-  - sbírá odpadky -> kontroluje, zdali ji nikdo neruší: ANO -> komunikuje s narušitelem -> sbírá odpadky
-                                                      : NE -> sbírá odpadky
+  - sbírá odpadky -> pokud ji někdo ruší, komunikuje s narušitelem -> sbírá odpadky
+  - <img width="600" alt="uklizecka-cyklus" src="images/uklizecka-cyklus.PNG">
 - **Zákazník v kavárně**
   - čeká na hráče, aby jej mohl předběhnout ve frontě -> jde k pultu, pokud je hráč v cestě, tak mu vynadá -> kupuje kávu u pultu -> jde se schovat do rohu, pokud je hráč v cestě, tak mu vynadá
-  
-  
-  
+  - <img width="600" alt="zakaznik-cyklus" src="images/zakaznik-cyklus.PNG">
   
