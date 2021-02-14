@@ -53,5 +53,16 @@ Dále mají postavy idle animace při sezení:
   - přednáší
   - klade otázky
   - rozdává kávu
-  - potřebuje pomoci s nalezením jendnoho předmětu
+  - potřebuje pomoci s nalezením jeho klávesnice
+  
+## Unikáty
+### Silně podmíněno
+- Následující události jsou podmíněny činností hráče:
+- **Vstupní karta**
+  - hráč musí promluvit s vrátnou, aby dostal vstupní kartu a mohl pokračovat do dalších prostor
+- **Kliče do počítačové učebny**
+  - hráč musí pomoci uklízečce tím, že sebere 10 prázdných kelímků, kde za odměnu dostane tyto klíče
+- **Ztracená klávesnice**
+  - s klíčemi lze odemknout počítačovou učebnu, kde se nachází klávesnici přednášjícího
+  - tím, že předáme klávesnici zpět přednášejícímu dostaneme stipendium na fakultu a hra končí
   
