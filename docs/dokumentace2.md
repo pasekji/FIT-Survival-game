@@ -63,6 +63,6 @@ Následující události jsou podmíněny činností hráče:
 - **Kliče do počítačové učebny**
   - hráč musí pomoci uklízečce tím, že sebere 10 prázdných kelímků, kde za odměnu dostane tyto klíče
 - **Ztracená klávesnice**
-  - s klíčemi lze odemknout počítačovou učebnu, kde se nachází klávesnici přednášjícího
+  - s klíčemi lze odemknout počítačovou učebnu, kde se nachází klávesnice přednášjícího
   - tím, že předáme klávesnici zpět přednášejícímu dostaneme stipendium na fakultu a hra končí
   
